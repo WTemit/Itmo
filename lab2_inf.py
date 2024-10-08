@@ -30,5 +30,4 @@ else:
             else:
                 print('Ошибка в символе i4')
                 hem=repl(6)
-
-print('Правильное сообщение: '+hem[2]+hem[4]+hem[5]+hem[6])       
+    print('Правильное сообщение: '+hem[2]+hem[4]+hem[5]+hem[6])       
