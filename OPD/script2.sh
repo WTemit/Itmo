@@ -1,0 +1,20 @@
+cd ~/lab0
+chmod 444 azumaril4
+chmod 006 frillish6
+chmod 666 gorebyss6/wailmer
+chmod 771 gorebyss6/vanillite
+chmod 737 gorebyss6/meganium
+chmod 732 gorebyss6/lucario
+chmod 307 gorebyss6/bronzeong
+chmod 307 gorebyss6/bronzong
+chmod 577 muk8/pawniard
+chmod 335 muk8/marshtomp
+chmod 755 muk8/meganium
+chmod 775 vulpix5/raticate
+chmod 333 vulpix5/pawniard
+chmod 444 vulpix5/kirlia
+chmod 337 vulpix5/crustle
+chmod 622 vulpix5/wynaut
+chmod 524 gorebyss6
+chmod 330 muk8
+chmod 307 vulpix5
