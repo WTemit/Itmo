@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: Pokemon.jar
+Created-By: 17.0.2 (OpenJDK BSD Porting Team)
