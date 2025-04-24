@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workers>
+  <Worker>
+    <id>1</id>
+    <name>Rob</name>
+    <coordinates>244;324</coordinates>
+    <creationDate>2025-04-21T06:34:54.801Z</creationDate>
+    <salary>3388484.0</salary>
+    <startDate>2025-04-21T07:24:40.414Z</startDate>
+    <endDate>2025-04-21T09:34:54.801844400</endDate>
+    <position>LABORER</position>
+    <organization>
+      <annualTurnover>6456456</annualTurnover>
+      <type>TRUST</type>
+    </organization>
+  </Worker>
+  <Worker>
+    <id>2</id>
+    <name>Lol</name>
+    <coordinates>23;424</coordinates>
+    <creationDate>2025-04-21T07:19:10.953Z</creationDate>
+    <salary>3347474.0</salary>
+    <startDate>2025-04-21T07:24:40.313Z</startDate>
+    <endDate>2025-04-21T10:19:10.953872900</endDate>
+    <position>LABORER</position>
+    <organization>
+      <annualTurnover>6456456</annualTurnover>
+      <type>TRUST</type>
+    </organization>
+  </Worker>
+</Workers>

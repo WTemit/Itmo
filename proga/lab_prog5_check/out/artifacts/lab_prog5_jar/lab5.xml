@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workers>
+  <Worker>
+    <id>2</id>
+    <name>24</name>
+    <coordinates>234;234</coordinates>
+    <creationDate>2025-04-24T08:09:16.171Z</creationDate>
+    <salary>23246.0</salary>
+    <startDate>2025-04-24T08:09:16.171Z</startDate>
+    <endDate>2025-04-24T11:09:16.171616600</endDate>
+    <position>LABORER</position>
+    <organization>
+      <annualTurnover>12356</annualTurnover>
+      <type>PUBLIC</type>
+      <officialAddress>
+        <street>Lomonosovo</street>
+        <town>
+          <x>345.0</x>
+          <y>2435</y>
+          <name>Saint-Peterburg</name>
+        </town>
+      </officialAddress>
+    </organization>
+  </Worker>
+</Workers>
