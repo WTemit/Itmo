@@ -1,5 +1,7 @@
 package commands;
 
+import utility.ExecutionResponse;
+
 public abstract class Command implements Describable, Executable {
 	private final String name;
 	private final String description;
@@ -43,4 +45,11 @@ public abstract class Command implements Describable, Executable {
 		", description='" + description + '\'' +
 		'}';
 	}
+	/**
+	 * Выполняет команду.
+	 *
+	 * @param arguments аргументы команды
+	 * @return результат выполнения команды
+	 */
+	public abstract ExecutionResponse apply(String[] arguments);
 }

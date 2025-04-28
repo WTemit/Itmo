@@ -1,19 +1,55 @@
 package utility;
 
+/**
+ * Класс для возврата результата выполнения команды.
+ */
 public class ExecutionResponse {
-	private boolean exitCode;
-	private String massage;
-	
-	public ExecutionResponse(boolean code, String s) {
-		exitCode = code;
-		massage = s;
+	private final boolean exitCode; // Успешность выполнения команды
+	private final String message;   // Сообщение для пользователя
+
+	/**
+	 * Конструктор для создания объекта ExecutionResponse.
+	 *
+	 * @param exitCode успешность выполнения команды
+	 * @param message  сообщение для пользователя
+	 */
+	public ExecutionResponse(boolean exitCode, String message) {
+		this.exitCode = exitCode;
+		this.message = message;
 	}
 
- 	public ExecutionResponse(String s) {
-		this(true, s);
+	/**
+	 * Упрощённый конструктор для успешного выполнения команды.
+	 *
+	 * @param message сообщение для пользователя
+	 */
+	public ExecutionResponse(String message) {
+		this(true, message);
 	}
-	
-	public boolean getExitCode() { return exitCode; }
-	public String getMassage() { return massage; }
-	public String toString() { return String.valueOf(exitCode)+";"+massage; }
+
+	/**
+	 * Возвращает успешность выполнения команды.
+	 *
+	 * @return true, если команда выполнена успешно, иначе false
+	 */
+	public boolean getExitCode() {
+		return exitCode;
+	}
+
+	/**
+	 * Возвращает сообщение для пользователя.
+	 *
+	 * @return сообщение
+	 */
+	public String getMessage() {
+		return message;
+	}
+
+	@Override
+	public String toString() {
+		return "ExecutionResponse{" +
+				"exitCode=" + exitCode +
+				", message='" + message + '\'' +
+				'}';
+	}
 }

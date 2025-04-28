@@ -34,6 +34,10 @@ public class Coordinates implements Validatable {
 		}
 	}
 
+	public Coordinates() {
+
+	}
+
 	/**
 	 * Валидирует правильность полей.
 	 * @return true, если все верно, иначе false

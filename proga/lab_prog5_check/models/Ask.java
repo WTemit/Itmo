@@ -8,13 +8,24 @@ import models.*;
 import utility.Console;
 import java.util.NoSuchElementException;
 import java.lang.IllegalArgumentException;
+import java.util.Scanner;
+
 import managers.CollectionManager;
 
 /**
  * Класс чтения объекта
  */
 public class Ask {
+	private static Scanner currentScanner = new Scanner(System.in);
 	public static class AskBreak extends Exception {
+	}
+
+	/**
+	 * Устанавливает источник ввода данных
+	 * @param scanner Scanner для чтения ввода (System.in для консоли или файловый Scanner для скриптов)
+	 */
+	public static void setScanner(Scanner scanner) {
+		currentScanner = scanner;
 	}
 
 	public static Worker askWorker(Console console, long id) throws AskBreak {
@@ -66,7 +77,7 @@ public class Ask {
 				if (!line.equals("")) {
 					try {
 						x = Long.parseLong(line);
-						if (x > -485) break;
+						if (x > -472) break;
 					} catch (NumberFormatException e) {
 					}
 				}
@@ -80,7 +91,7 @@ public class Ask {
 				if (!line.equals("")) {
 					try {
 						y = Integer.parseInt(line);
-						if (y <= 907) break;
+						break;
 					} catch (NumberFormatException e) {
 					}
 				}

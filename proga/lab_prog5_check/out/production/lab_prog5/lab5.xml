@@ -5,19 +5,39 @@
     <name>23454</name>
     <coordinates>324;123</coordinates>
     <creationDate>2025-04-24T08:05:56.661Z</creationDate>
-    <salary>1.23464457E8</salary>
+    <salary>1343246.0</salary>
+    <startDate>2025-04-24T08:05:56.661Z</startDate>
+    <endDate>2025-04-24T11:05:56.661172300</endDate>
+    <position>LABORER</position>
+    <organization>
+      <annualTurnover>0</annualTurnover>
+      <officialAddress>
+        <street>null</street>
+        <town>
+          <x>234.0</x>
+          <y>2134</y>
+          <name>null</name>
+        </town>
+      </officialAddress>
+    </organization>
+  </Worker>
+  <Worker>
+    <id>5</id>
+    <name>23454</name>
+    <coordinates>324;123</coordinates>
+    <creationDate>2025-04-24T08:05:56.661Z</creationDate>
+    <salary>1343246</salary>
     <startDate>2025-04-24T08:05:56.661Z</startDate>
     <endDate>2025-04-24T11:05:56.661172300</endDate>
     <position>LABORER</position>
     <organization>
       <annualTurnover>34345346</annualTurnover>
-      <type>PUBLIC</type>
       <officialAddress>
-        <street>346</street>
+        <street>null</street>
         <town>
           <x>234.0</x>
           <y>2134</y>
-          <name>654</name>
+          <name>null</name>
         </town>
       </officialAddress>
     </organization>

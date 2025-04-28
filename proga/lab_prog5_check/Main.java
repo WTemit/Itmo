@@ -31,32 +31,34 @@ public class Main {
 		}
 
 
-		
+
 		var dumpManager = new DumpManager(filePath, console);
 		var collectionManager = new CollectionManager(dumpManager);
 		if (!collectionManager.loadCollection()) {
 			System.exit(1);
 		}
-		
-		var commandManager = new CommandManager() {{
-			register("help", new Help(console, this));
-			register("history", new History(console, this));
-			register("info", new Info(console, collectionManager));
-			register("show", new Show(console, collectionManager));
-			register("add", new Add(console, collectionManager));
-			register("update", new Update(console, collectionManager));
-			register("remove_by_id", new RemoveById(console, collectionManager));
-			register("clear", new Clear(console, collectionManager));
-			register("save", new Save(console, collectionManager));
-			register("execute_script", new ExecuteScript(console));
-			register("exit", new Exit(console));
-			register("add_if_max", new AddIfMax(console, collectionManager));
-			register("remove_lower", new RemoveLower(console, collectionManager));
-			register("min_by_id", new MinById(console, collectionManager));
-			register("count_by_start_date", new CountByStartDate(console, collectionManager));
-			register("max_by_start_date", new MaxByStartDate(console, collectionManager));
-		}};
 
-		new Runner(console, commandManager).interactiveMode();
+		CommandManager commandManager = new CommandManager();
+		Runner runner = new Runner(console, commandManager);
+		commandManager.register("help", new Help(console, commandManager));
+		commandManager.register("history", new History(console, commandManager));
+		commandManager.register("info", new Info(console, collectionManager));
+		commandManager.register("show", new Show(console, collectionManager));
+		commandManager.register("add", new Add(console, collectionManager));
+		commandManager.register("update", new Update(console, collectionManager));
+		commandManager.register("remove_by_id", new RemoveById(console, collectionManager));
+		commandManager.register("clear", new Clear(console, collectionManager));
+		commandManager.register("save", new Save(console, collectionManager));
+		commandManager.register("execute_script", new ExecuteScript(console));
+		commandManager.register("exit", new Exit(console));
+		commandManager.register("add_if_max", new AddIfMax(console, collectionManager));
+		commandManager.register("remove_lower", new RemoveLower(console, collectionManager));
+		commandManager.register("min_by_id", new MinById(console, collectionManager));
+		commandManager.register("count_by_start_date", new CountByStartDate(console, collectionManager));
+		commandManager.register("max_by_start_date", new MaxByStartDate(console, collectionManager));
+		runner.interactiveMode();
+
+
+
 	}
 }
