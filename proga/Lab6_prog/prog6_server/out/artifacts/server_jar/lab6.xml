@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workers>
+  <Worker>
+    <id>1</id>
+<name>kjhefhweif</name>
+    <coordinates>
+      <x>456467</x>
+      <y>4385</y>
+    </coordinates>
+<creationDate>2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]</creationDate>
+<salary>34565.0</salary>
+<startDate>2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]</startDate>
+<endDate>2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]</endDate>
+<position>LABORER</position>
+    <organization>
+      <annualTurnover>344546</annualTurnover>
+      <type>TRUST</type>
+      <officialAddress>
+        <street>23e45</street>
+        <town>
+          <x>233.0</x>
+          <y>543</y>
+          <nameT>2345</nameT>
+        </town>
+      </officialAddress>
+    </organization>
+  </Worker>
+</Workers>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Appenders>
+            <Console name="ConsoleAppender" target="SYSTEM_OUT">
+                <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            </Console>
+            <File name="FileAppender" fileName="logs/server.log" append="true">
+                <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            </File>
+        </Appenders>
+    </Appenders>
+
+    <Loggers>
+        <!-- Set level for client packages -->
+        <Logger name="client" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <!-- <AppenderRef ref="LogFile"/> -->
+        </Logger>
+        <Logger name="server" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+        <Logger name="common" level="INFO" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+
+        <!-- Set root logger level -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <!-- <AppenderRef ref="LogFile"/> -->
+        </Root>
+        <Root level="INFO"> <!-- Можно поставить ERROR, чтобы по умолчанию было меньше вывода -->
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
