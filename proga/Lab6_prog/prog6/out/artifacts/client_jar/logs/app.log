@@ -1,0 +1,28 @@
+2025-05-17 13:53:58.401 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 13:53:58.407 [main] INFO  client.ClientMain - Attempting to connect to server at localhost:14881
+2025-05-17 13:53:58.505 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: localhost/127.0.0.1:14881
+2025-05-17 13:53:58.507 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 13:53:58.508 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 13:54:01.731 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-05-17 13:54:01.731 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-05-17 13:54:01.740 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-05-17 13:54:01.740 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Sending request show to localhost/127.0.0.1:14881
+2025-05-17 13:54:01.741 [main] DEBUG client.network.ClientNetworkIO - Waiting for response (max 2000 ms)...
+2025-05-17 13:54:01.745 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Received 216 bytes from /127.0.0.1:14881
+2025-05-17 13:54:01.751 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 16
+2025-05-17 13:55:31.345 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 13:55:31.351 [main] INFO  client.ClientMain - Attempting to connect to server at 88.201.133.173:14881
+2025-05-17 13:55:31.453 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: /88.201.133.173:14881
+2025-05-17 13:55:31.455 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 13:55:31.456 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 13:55:36.109 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-05-17 13:55:36.110 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-05-17 13:55:36.118 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-05-17 13:55:36.119 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Sending request show to /88.201.133.173:14881
+2025-05-17 13:55:36.120 [main] DEBUG client.network.ClientNetworkIO - Waiting for response (max 2000 ms)...
+2025-05-17 13:55:36.127 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Received 216 bytes from /88.201.133.173:14881
+2025-05-17 13:55:36.133 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 16
+2025-05-17 13:55:42.866 [main] WARN  client.util.Runner - Поток ввода закрыт (Ctrl+D?). Выход.
+2025-05-17 13:55:42.866 [main] INFO  client.util.Runner - Выход из интерактивного режима.
+2025-05-17 13:55:42.868 [main] INFO  client.ClientMain - Client shutting down...
+2025-05-17 13:55:42.869 [main] INFO  client.network.ClientNetworkIO - Selector closed.

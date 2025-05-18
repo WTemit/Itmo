@@ -1,0 +1,218 @@
+2025-05-17 13:51:49.991 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 13:51:49.998 [main] INFO  client.ClientMain - Attempting to connect to server at localhost:14881
+2025-05-17 13:51:50.124 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: localhost/127.0.0.1:14881
+2025-05-17 13:51:50.127 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 13:51:50.128 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 13:54:57.922 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 13:54:57.929 [main] INFO  client.ClientMain - Attempting to connect to server at 88.201.133.173:14881
+2025-05-17 13:54:58.040 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: /88.201.133.173:14881
+2025-05-17 13:54:58.044 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 13:54:58.044 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 13:55:00.552 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-05-17 13:55:00.552 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-05-17 13:55:00.562 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-05-17 13:55:00.562 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Sending request show to /88.201.133.173:14881
+2025-05-17 13:55:00.563 [main] DEBUG client.network.ClientNetworkIO - Waiting for response (max 2000 ms)...
+2025-05-17 13:55:00.570 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Received 216 bytes from /88.201.133.173:14881
+2025-05-17 13:55:00.578 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 16
+2025-05-17 14:06:04.674 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 14:06:04.681 [main] INFO  client.ClientMain - Attempting to connect to server at 88.201.133.173:14881
+2025-05-17 14:06:04.795 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: /88.201.133.173:14881
+2025-05-17 14:06:04.798 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 14:06:04.798 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 14:06:11.233 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-05-17 14:06:11.233 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-05-17 14:06:11.245 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-05-17 14:06:11.245 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Sending request show to /88.201.133.173:14881
+2025-05-17 14:06:11.246 [main] DEBUG client.network.ClientNetworkIO - Waiting for response (max 2000 ms)...
+2025-05-17 14:06:11.251 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Received 517 bytes from /88.201.133.173:14881
+2025-05-17 14:06:11.259 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 331
+2025-05-17 14:06:24.173 [main] WARN  client.util.Runner - Команда '"C:\Program' не найдена.
+2025-05-17 14:06:24.176 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:24.176 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:24.176 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:24.177 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.177 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.177 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.178 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.178 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.178 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.179 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.179 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:24.179 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:24.179 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:24.180 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:24.180 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:24.180 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:24.180 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:24.181 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:24.181 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:24.181 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:24.181 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:24.182 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:24.182 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.182 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:24.182 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:24.183 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:24.183 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.183 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.183 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.184 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.184 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.184 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.184 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.185 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:24.185 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:24.185 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:24.185 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:24.185 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:24.186 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:24.186 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:24.186 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:24.186 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:24.187 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:24.187 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:24.187 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:24.396 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.396 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:24.396 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:24.396 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:24.397 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.397 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.397 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.397 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.398 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.398 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.398 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.398 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:24.398 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:24.399 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:24.399 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:24.399 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:24.399 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:24.399 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:24.400 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:24.400 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:24.400 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:24.400 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:24.401 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:24.565 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.566 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:24.566 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:24.566 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:24.566 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.566 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.567 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.567 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.567 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.567 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.567 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.568 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:24.568 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:24.568 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:24.568 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:24.568 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:24.569 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:24.569 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:24.569 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:24.569 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:24.569 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:24.570 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:24.570 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:24.758 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.758 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:24.758 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:24.759 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:24.759 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.759 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.759 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.760 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.760 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.760 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.760 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.760 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:24.761 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:24.761 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:24.761 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:24.761 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:24.761 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:24.761 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:24.762 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:24.762 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:24.762 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:24.762 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:24.762 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:24.951 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.952 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:24.952 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:24.952 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:24.952 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.952 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:24.953 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:24.953 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.953 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:24.953 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.953 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:24.954 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:24.954 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:24.954 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:24.954 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:24.954 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:24.955 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:24.955 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:24.955 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:24.955 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:24.955 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:24.955 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:24.956 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:25.747 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:25.747 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:25.747 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:25.747 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:25.748 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:25.748 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:25.748 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:25.749 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:25.749 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:25.749 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:25.749 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:25.749 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:25.750 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:25.750 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:25.750 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:25.750 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:25.751 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:25.751 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:25.751 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:25.751 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:25.751 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:25.751 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:25.752 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:26.436 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:26.437 [main] WARN  client.util.Runner - Команда '14:06:04.674' не найдена.
+2025-05-17 14:06:26.437 [main] WARN  client.util.Runner - Команда '14:06:04.681' не найдена.
+2025-05-17 14:06:26.437 [main] WARN  client.util.Runner - Команда '14:06:04.795' не найдена.
+2025-05-17 14:06:26.437 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:26.438 [main] WARN  client.util.Runner - Команда '14:06:04.798' не найдена.
+2025-05-17 14:06:26.438 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:26.438 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:26.438 [main] WARN  client.util.Runner - Команда '14:06:11.233' не найдена.
+2025-05-17 14:06:26.438 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:26.439 [main] WARN  client.util.Runner - Команда '14:06:11.245' не найдена.
+2025-05-17 14:06:26.439 [main] WARN  client.util.Runner - Команда '14:06:11.246' не найдена.
+2025-05-17 14:06:26.439 [main] WARN  client.util.Runner - Команда '14:06:11.251' не найдена.
+2025-05-17 14:06:26.439 [main] WARN  client.util.Runner - Команда '14:06:11.259' не найдена.
+2025-05-17 14:06:26.439 [main] WARN  client.util.Runner - Команда 'Worker' не найдена.
+2025-05-17 14:06:26.439 [main] WARN  client.util.Runner - Команда 'Name:' не найдена.
+2025-05-17 14:06:26.440 [main] WARN  client.util.Runner - Команда 'Coordinates:' не найдена.
+2025-05-17 14:06:26.440 [main] WARN  client.util.Runner - Команда 'Creation' не найдена.
+2025-05-17 14:06:26.440 [main] WARN  client.util.Runner - Команда 'Salary:' не найдена.
+2025-05-17 14:06:26.440 [main] WARN  client.util.Runner - Команда 'Start' не найдена.
+2025-05-17 14:06:26.440 [main] WARN  client.util.Runner - Команда 'End' не найдена.
+2025-05-17 14:06:26.441 [main] WARN  client.util.Runner - Команда 'Position:' не найдена.
+2025-05-17 14:06:26.441 [main] WARN  client.util.Runner - Команда 'Organization:' не найдена.
+2025-05-17 14:06:44.320 [main] WARN  client.util.Runner - Команда '$' не найдена.
+2025-05-17 14:06:56.192 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-05-17 14:07:05.520 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-05-17 14:07:05.521 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: lol.txt
+2025-05-17 14:07:05.521 [main] ERROR client.util.Runner - Файл скрипта не найден: lol.txt
