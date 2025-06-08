@@ -91,25 +91,5 @@ public class StandardConsole {
 		return P1;
 	}
 
-	/**
-	 * Выбирает BufferedReader для чтения (например, для скриптов).
-	 * УСТАРЕЛО: Ask теперь управляет переключением Scanner. Этот метод может быть удален.
-	 * @param reader BufferedReader для использования при чтении.
-	 */
-	@Deprecated
-	public void selectFileReader(BufferedReader reader) {
-		fileReader = reader;
-		fileMode = (reader != null);
-	}
 
-	/**
-	 * Выбирает консольный Scanner (System.in) для чтения.
-	 * УСТАРЕЛО: Ask теперь управляет переключением Scanner. Этот метод может быть удален.
-	 */
-	@Deprecated
-	public void selectConsoleReader() {
-		fileReader = null; // Сбрасываем файловый ридер
-		fileMode = false;
-		// Scanner для консоли всегда доступен через consoleScanner
-	}
 }
