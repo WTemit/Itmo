@@ -56,7 +56,6 @@ public class AddIfMax extends Command {
             long freeId = collectionManager.getFreeId();
             newWorker.setId(freeId);
             newWorker.setCreationDate(ZonedDateTime.now());
-            // newWorker.setStartDate(ZonedDateTime.now()); // По необходимости
 
             boolean added = collectionManager.add(newWorker);
             if (added) {

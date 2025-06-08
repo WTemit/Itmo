@@ -43,9 +43,7 @@ public class ServerConsole implements Runnable { // Делаем Runnable для
             } else {
                 // Scanner закрыт (например, Ctrl+D в System.in)
                 consoleLogger.info("Ввод для серверной консоли завершен.");
-                // Если сервер еще работает, но консольный ввод закончился,
-                // можно либо остановить сервер, либо просто завершить этот поток.
-                // Для простоты, завершим этот поток.
+                // Если сервер еще работает, но консольный ввод закончился, завершим этот поток.
                 consoleIsRunning = false;
             }
         }
@@ -77,7 +75,5 @@ public class ServerConsole implements Runnable { // Делаем Runnable для
     // Метод для внешней остановки консоли, если потребуется
     public void shutdown() {
         consoleIsRunning = false;
-        // Можно попытаться прервать поток, если он заблокирован на scanner.hasNextLine(),
-        // но закрытие System.in - плохая идея. Лучше дать ему завершиться естественно.
     }
 }

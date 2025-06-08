@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
-// Интерфейс Executable больше не нужен, т.к. есть абстрактный метод apply
 public abstract class Command implements Describable {
 	protected static final Logger logger = LogManager.getLogger(Command.class); // Общий логгер или для каждого свой
 	private final String name;
@@ -46,7 +45,6 @@ public abstract class Command implements Describable {
 	@Deprecated
 	public ExecutionResponse apply(String[] arguments) {
 		logger.warn("Вызван устаревший метод apply(String[]) для команды {}", getName());
-		// По умолчанию возвращаем ошибку, т.к. этот метод не должен вызываться
 		return new ExecutionResponse(false, "Некорректный вызов команды на сервере.");
 	}
 

@@ -32,7 +32,6 @@ public class RemoveLower extends Command {
 
         Worker referenceWorker = (Worker) objectArg;
 
-        // Валидация эталонного Worker (на всякий случай)
         if (!referenceWorker.validate()) {
             commandLogger.warn("Эталонный Worker не прошел валидацию: {}", referenceWorker);
             return new ExecutionResponse(false, "Поля эталонного Рабочего не валидны!");
@@ -42,7 +41,7 @@ public class RemoveLower extends Command {
 
         // Собираем ID элементов, которые нужно удалить
         Set<Long> idsToRemove = collectionManager.getCollection().stream()
-                .filter(worker -> worker.compareTo(referenceWorker) < 0) // Используем compareTo
+                .filter(worker -> worker.compareTo(referenceWorker) < 0)
                 .map(Worker::getId)
                 .collect(Collectors.toSet());
 

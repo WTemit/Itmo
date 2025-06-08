@@ -31,8 +31,6 @@ public class MinById extends Command {
         // Используем Stream API для поиска минимума по ID
         Optional<Worker> minWorkerOpt = collectionManager.getCollection().stream()
                 .min(Comparator.comparing(Worker::getId)); // Сравниваем по ID
-
-        // Т.к. ID не null и уникальны, элемент всегда найдется, если коллекция не пуста
         if (minWorkerOpt.isPresent()) {
             Worker minWorker = minWorkerOpt.get();
             commandLogger.info("Найден работник с минимальным ID: {}", minWorker.getId());

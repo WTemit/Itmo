@@ -15,8 +15,6 @@ public class Save extends Command {
 		this.collectionManager = collectionManager;
 	}
 
-	// Этот метод apply(Request) по ТЗ не вызывается клиентом.
-	// Оставляем его, если есть внутренние сценарии, когда сервер формирует себе Request.
 	@Override
 	public ExecutionResponse apply(Request request) {
 		commandLogger.info("Команда 'save' вызвана (возможно, внутренне через Request). Сохранение коллекции...");
@@ -32,7 +30,6 @@ public class Save extends Command {
 		try {
 			collectionManager.saveCollection();
 			commandLogger.info("Коллекция успешно сохранена.");
-			// Сообщение для серверной консоли или для ответа клиенту (если бы он мог вызывать)
 			return new ExecutionResponse("Коллекция успешно сохранена на сервере.");
 		} catch (Exception e) {
 			commandLogger.error("Ошибка при сохранении коллекции: {}", e.getMessage(), e);

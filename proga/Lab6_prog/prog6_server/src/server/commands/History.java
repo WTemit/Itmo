@@ -21,9 +21,8 @@ public class History extends Command {
 	public ExecutionResponse apply(Request request) {
 		commandLogger.debug("Выполнение команды history...");
 		// Получаем историю команд, хранящуюся на СЕРВЕРЕ
-		// Убедитесь, что CommandManager хранит историю (например, последние N команд)
 		String historyText = commandManager.getCommandHistory().stream()
-				.collect(Collectors.joining("\n")); // Форматирование по желанию
+				.collect(Collectors.joining("\n"));
 
 		if (historyText.isEmpty()) {
 			commandLogger.info("История команд пуста.");

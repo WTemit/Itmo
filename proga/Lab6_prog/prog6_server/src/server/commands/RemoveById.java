@@ -34,7 +34,7 @@ public class RemoveById extends Command {
 		}
 
 		// Проверяем существование элемента перед удалением
-		Worker workerToRemove = collectionManager.byId(id); // Метод byId должен быть в CollectionManager
+		Worker workerToRemove = collectionManager.byId(id);
 		if (workerToRemove == null) {
 			commandLogger.warn("Попытка удаления несуществующего ID: {}", id);
 			return new ExecutionResponse(false, "Элемент с ID " + id + " не найден.");
@@ -47,7 +47,6 @@ public class RemoveById extends Command {
 			commandLogger.info("Рабочий с ID {} успешно удален.", id);
 			return new ExecutionResponse("Рабочий с ID " + id + " успешно удален!");
 		} else {
-			// Эта ситуация странная, если проверка выше прошла
 			commandLogger.error("Не удалось удалить рабочего с ID {}, хотя он был найден.", id);
 			return new ExecutionResponse(false, "Не удалось удалить рабочего с ID " + id + " (внутренняя ошибка).");
 		}

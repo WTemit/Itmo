@@ -57,12 +57,10 @@ public class Update extends Command {
 		}
 
 		// 3. Устанавливаем корректный ID и дату создания в обновленных данных
-		//    (Клиент не должен менять ID или дату создания)
 		updatedWorkerData.setId(id); // Гарантируем правильный ID
 		updatedWorkerData.setCreationDate(oldWorker.getCreationDate()); // Сохраняем исходную дату создания
 
 		// 4. Выполняем замену в менеджере коллекции
-		//    CollectionManager должен уметь обновлять элемент (удалить старый, добавить новый)
 		boolean updated = collectionManager.update(id, updatedWorkerData);
 
 		if (updated) {

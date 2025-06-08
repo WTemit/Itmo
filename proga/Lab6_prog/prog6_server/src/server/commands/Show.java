@@ -34,7 +34,6 @@ public class Show extends Command {
 					.collect(Collectors.joining("\n\n"));
 
 			commandLogger.debug("Команда show успешно сформировала результат.");
-			// Полный результат может быть большим, отправляем его целиком
 			return new ExecutionResponse(result);
 		} catch (Exception e) {
 			commandLogger.error("Ошибка при формировании вывода show: {}", e.getMessage(), e);

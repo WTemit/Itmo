@@ -130,20 +130,20 @@ public class ServerMain {
     }
 
     private void registerCommands() {
-        commandManager.register("help", new Help(commandManager)); // Убрали Console
-        commandManager.register("history", new History(commandManager)); // Убрали Console
-        commandManager.register("info", new Info(collectionManager)); // Убрали Console
-        commandManager.register("show", new Show(collectionManager)); // Убрали Console
-        commandManager.register("add", new Add(collectionManager)); // Убрали Console
-        commandManager.register("update", new Update(collectionManager)); // Убрали Console
-        commandManager.register("remove_by_id", new RemoveById(collectionManager)); // Убрали Console
-        commandManager.register("clear", new Clear(collectionManager)); // Убрали Console
-        commandManager.register("save", new Save(collectionManager)); // Убрали Console
-        commandManager.register("add_if_max", new AddIfMax(collectionManager)); // Убрали Console
-        commandManager.register("remove_lower", new RemoveLower(collectionManager)); // Убрали Console
-        commandManager.register("min_by_id", new MinById(collectionManager)); // Убрали Console
-        commandManager.register("count_by_start_date", new CountByStartDate(collectionManager)); // Убрали Console
-        commandManager.register("max_by_start_date", new MaxByStartDate(collectionManager)); // Убрали Console
+        commandManager.register("help", new Help(commandManager));
+        commandManager.register("history", new History(commandManager));
+        commandManager.register("info", new Info(collectionManager));
+        commandManager.register("show", new Show(collectionManager));
+        commandManager.register("add", new Add(collectionManager));
+        commandManager.register("update", new Update(collectionManager));
+        commandManager.register("remove_by_id", new RemoveById(collectionManager));
+        commandManager.register("clear", new Clear(collectionManager));
+        commandManager.register("save", new Save(collectionManager));
+        commandManager.register("add_if_max", new AddIfMax(collectionManager));
+        commandManager.register("remove_lower", new RemoveLower(collectionManager));
+        commandManager.register("min_by_id", new MinById(collectionManager));
+        commandManager.register("count_by_start_date", new CountByStartDate(collectionManager));
+        commandManager.register("max_by_start_date", new MaxByStartDate(collectionManager));
     }
 
     public void run() {
@@ -172,7 +172,6 @@ public class ServerMain {
                 }
             } catch (IOException e) {
                 logger.error("Ошибка ввода/вывода в главном цикле: {}", e.getMessage(), e);
-                // Можно добавить логику перезапуска или остановки
             } catch (Exception e) {
                 logger.error("Непредвиденная ошибка в главном цикле: {}", e.getMessage(), e);
             }
@@ -211,7 +210,6 @@ public class ServerMain {
                     sendResponse(currentChannel, response, clientAddress);
                 } else {
                     logger.warn("Не удалось десериализовать запрос от {}", clientAddress);
-                    // Можно отправить ответ об ошибке, если необходимо
                 }
             } else {
                 logger.warn("Получен пустой пакет?");

@@ -25,9 +25,9 @@ public class CollectionManager {
 	private long currentId = 1; // Используется для генерации getFreeId
 
 	// Блокировка для обеспечения потокобезопасности при модификации коллекции
-	private final ReadWriteLock collectionLock = new ReentrantReadWriteLock(true); // true для 'fair'
+	private final ReadWriteLock collectionLock = new ReentrantReadWriteLock(true);
 
-	public CollectionManager(DumpManager dumpManager, Logger parentLogger) { // Можно передать логгер, если нужно
+	public CollectionManager(DumpManager dumpManager, Logger parentLogger) {
 		this.dumpManager = dumpManager;
 		this.lastInitTime = null;
 		this.lastSaveTime = null;
@@ -125,7 +125,6 @@ public class CollectionManager {
 			logger.info("Коллекция успешно сохранена в файл.");
 		} catch (Exception e) {
 			logger.error("Ошибка при сохранении коллекции: {}", e.getMessage(), e);
-			// Здесь можно решить, нужно ли пробрасывать исключение дальше
 		} finally {
 			collectionLock.readLock().unlock();
 		}
@@ -138,7 +137,6 @@ public class CollectionManager {
 		try {
 			collection.clear();    // Очищаем основной HashSet
 			workersMap.clear();    // Очищаем карту ID, если она используется
-			// currentId можно не сбрасывать, getFreeId продолжит работать
 			logger.info("Коллекция и карта ID были полностью очищены.");
 		} finally {
 			collectionLock.writeLock().unlock();
@@ -178,16 +176,14 @@ public class CollectionManager {
 	public boolean remove(long id) {
 		collectionLock.writeLock().lock();
 		try {
-			Worker removedWorker = workersMap.remove(id); // Удаляем из карты
+			Worker removedWorker = workersMap.remove(id); // Удаляем из Map
 			if (removedWorker != null) {
 				boolean removedFromSet = collection.remove(removedWorker); // Удаляем из сета
 				if (removedFromSet) {
 					logger.debug("Работник с ID {} удален из коллекции.", id);
 					return true;
 				} else {
-					// Эта ситуация странная: был в карте, но не в сете?
 					logger.error("Работник с ID {} был удален из карты, но не найден в сете!", id);
-					// Можно попытаться восстановить консистентность, но лучше разобраться в причине
 					return false; // Считаем операцию неуспешной
 				}
 			} else {
@@ -243,7 +239,6 @@ public class CollectionManager {
 		collectionLock.readLock().lock();
 		try {
 			Worker worker = workersMap.get(id);
-			// logger.trace("Поиск по ID {}: {}", id, (worker == null ? "не найден" : "найден")); // Для детального лога
 			return worker;
 		} finally {
 			collectionLock.readLock().unlock();
@@ -256,18 +251,14 @@ public class CollectionManager {
 	 * @return Свободный ID.
 	 */
 	public long getFreeId() {
-		collectionLock.readLock().lock(); // Достаточно блокировки на чтение для проверки containsKey
+		collectionLock.readLock().lock();
 		try {
-			// Простой инкремент, пока не найдем свободный
-			// В очень редких случаях может зациклиться, если ID переполнятся
-			// и начнутся с 1 заново, но это маловероятно.
 			while (workersMap.containsKey(currentId)) {
 				if (++currentId <= 0) { // Проверка на переполнение long
 					currentId = 1; // Начинаем сначала, если переполнился
 					logger.warn("Счетчик ID переполнился и был сброшен на 1.");
 				}
 			}
-			// logger.trace("Сгенерирован свободный ID: {}", currentId);
 			return currentId; // Возвращаем найденный свободный ID (не инкрементируем здесь)
 		} finally {
 			collectionLock.readLock().unlock();
@@ -285,7 +276,6 @@ public class CollectionManager {
 			List<Worker> sortedList = collection.stream()
 					.sorted(Comparator.comparing(Worker::getName, String.CASE_INSENSITIVE_ORDER)) // Сортировка по имени без учета регистра
 					.collect(Collectors.toList());
-			// logger.trace("Возвращен отсортированный по имени список из {} элементов.", sortedList.size());
 			return sortedList;
 		} finally {
 			collectionLock.readLock().unlock();

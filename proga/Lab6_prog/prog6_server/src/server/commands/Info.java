@@ -37,7 +37,6 @@ public class Info extends Command {
 		// Используем StringBuilder для формирования строки
 		StringBuilder sb = new StringBuilder();
 		sb.append("Сведения о коллекции:\n");
-		// Используем .getSimpleName() для краткости
 		sb.append(" Тип: ").append(collectionManager.getCollection().getClass().getSimpleName()).append("\n");
 		sb.append(" Количество элементов: ").append(collectionManager.getCollection().size()).append("\n");
 		sb.append(" Дата последнего сохранения: ").append(lastSaveTimeString).append("\n");

@@ -27,7 +27,6 @@ public class Clear extends Command {
 				commandLogger.info("Коллекция успешно очищена. Было удалено {} элементов.", sizeBefore);
 				return new ExecutionResponse("Коллекция успешно очищена!");
 			} else {
-				// Эта ветка не должна достигаться, если clearCollection() использует HashSet.clear()
 				commandLogger.error("Коллекция не была полностью очищена. Осталось {} элементов.", sizeAfter);
 				return new ExecutionResponse(false, "Ошибка: Коллекция не была полностью очищена. Осталось " + sizeAfter + " элементов.");
 			}

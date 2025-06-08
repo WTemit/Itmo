@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import server.managers.CollectionManager;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime; // Используем ZonedDateTime
+import java.time.ZonedDateTime;
 
 public class Add extends Command {
 	private static final Logger commandLogger = LogManager.getLogger(Add.class); // Используем свой логгер
@@ -53,7 +53,6 @@ public class Add extends Command {
 		long freeId = collectionManager.getFreeId();
 		workerToAdd.setId(freeId);
 		workerToAdd.setCreationDate(ZonedDateTime.now()); // Устанавливаем серверное время создания
-		// workerToAdd.setStartDate(ZonedDateTime.now()); // Решите, нужно ли перезаписывать дату начала
 
 		boolean added = collectionManager.add(workerToAdd);
 
