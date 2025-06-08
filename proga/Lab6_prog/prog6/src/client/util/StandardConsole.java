@@ -1,11 +1,10 @@
-package client.util; // Правильное имя пакета для клиента
+package client.util;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.lang.IllegalStateException;
-import java.util.Scanner; // Импортируем Scanner
+import java.util.Scanner;
 
 /**
  * Стандартная реализация консоли для ввода/вывода.
@@ -16,8 +15,6 @@ public class StandardConsole {
 	private static final String P1 = "$ "; // Приглашение командной строки
 	// Scanner для чтения из консоли (System.in) - теперь предпочтительнее BufferedReader
 	private static final Scanner consoleScanner = new Scanner(System.in);
-
-	// BufferedReader для файла - УСТАРЕВШИЙ ПОДХОД
 	// Логика переключения ввода теперь управляется в client.util.Ask
 	private static BufferedReader fileReader = null;
 	private boolean fileMode = false; // Флаг для определения источника
@@ -78,42 +75,6 @@ public class StandardConsole {
 			}
 			return consoleScanner.nextLine();
 		}
-	}
-
-	/**
-	 * Проверяет, готов ли ввод для чтения без блокировки.
-	 * ПРИМЕЧАНИЕ: Менее надежно для System.in. Использование Ask и Scanner.hasNextLine() предпочтительнее.
-	 * @return true, если ввод готов, иначе false.
-	 * @throws IllegalStateException Если произошла ошибка ввода-вывода.
-	 */
-	public boolean isCanReadln() throws IllegalStateException {
-		if (fileMode && fileReader != null) {
-			// Устаревшая логика для BufferedReader
-			try {
-				return fileReader.ready();
-			} catch (IOException e) {
-				throw new IllegalStateException("Ошибка проверки готовности файлового ввода: " + e.getMessage());
-			}
-		} else {
-			// Для Scanner System.in метод ready() недоступен.
-			// Можно попробовать использовать hasNextLine(), но он может блокироваться.
-			// Возвращаем true, предполагая, что консоль всегда готова (не очень точно).
-			// Лучше полагаться на логику в Ask.
-			return true; // Ненадежно для консоли
-			// Или можно выбросить исключение:
-			// throw new UnsupportedOperationException("isCanReadln не поддерживается для консольного Scanner");
-		}
-	}
-
-	/**
-	 * Выводит строку таблицы в две колонки с форматированием.
-	 * @param elementLeft Объект левой колонки.
-	 * @param elementRight Объект правой колонки.
-	 */
-	public void printTable(Object elementLeft, Object elementRight) {
-		// Определяем ширину колонки (можно настроить)
-		int leftWidth = 35;
-		System.out.printf(" %-" + leftWidth + "s | %s%n", elementLeft, elementRight);
 	}
 
 	/**

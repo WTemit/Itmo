@@ -17,14 +17,11 @@ public class Runner {
 	private final CommandManager commandManager;
 	private final ClientNetworkIO networkIO;
 	private final List<String> scriptStack = new ArrayList<>();
-	// private final Scanner consoleScanner; // Больше не нужно хранить здесь
 
 	public Runner(StandardConsole console, CommandManager commandManager, ClientNetworkIO networkIO) {
 		this.console = console;
 		this.commandManager = commandManager;
 		this.networkIO = networkIO;
-		// Ask инициализируется своим собственным Scanner'ом при загрузке класса
-		// Ask.setScanner(this.consoleScanner, false); // Больше не нужно
 	}
 
 	/**
@@ -41,8 +38,6 @@ public class Runner {
 			while (true) {
 				console.prompt();
 				try {
-					// Используем Ask.readLine() для согласованности и обработки 'exit'
-					// String line = Ask.readLine(); // Альтернатива, если StandardConsole.readln() ненадежна
 					String line = console.readln(); // Продолжаем использовать console.readln()
 					userCommand = (line.trim() + " ").split(" ", 2);
 					userCommand[1] = userCommand[1].trim();
@@ -52,10 +47,7 @@ public class Runner {
 				} catch (IllegalStateException e) {
 					logger.error("Ридер консоли в недопустимом состоянии. Выход.", e);
 					break;
-				} /*catch (Ask.AskBreak e) { // Если используем Ask.readLine()
-                    logger.info("Пользователь ввел 'exit'. Завершение клиента.");
-                    break;
-                }*/
+				}
 
 				if (userCommand[0].isEmpty()) {
 					continue; // Пропускаем пустой ввод
@@ -148,7 +140,7 @@ public class Runner {
 					} else if ("exit".equals(response.getMessage()) && response.getExitCode()) {
 						scriptOutput.append("В скрипте встречена команда Exit. Завершение клиента.\n");
 						logger.info("Команда Exit в скрипте '{}'. Завершение.", filename);
-						// ВАЖНО: Восстанавливаем состояние ПЕРЕД возвратом сигнала exit
+						// Восстанавливаем состояние ПЕРЕД возвратом сигнала exit
 						Ask.restoreState(savedAskState);
 						scriptStack.remove(absolutePath);
 						return response; // Позволяем вызывающему коду обработать exit
@@ -156,12 +148,9 @@ public class Runner {
 						scriptOutput.append("Ошибка: ").append(response.getMessage()).append("\n");
 						logger.warn("Команда [{}] в скрипте [{}] не удалась: {}", scriptCommand[0], filename, response.getMessage());
 						scriptOk = false;
-						// Решите, останавливать ли скрипт при ошибке команды (опционально)
-						// break;
 					} else {
 						scriptOutput.append(response.getMessage()).append("\n");
 					}
-					// Добавьте небольшую задержку при необходимости, например, Thread.sleep(10);
 
 				} catch (NoSuchElementException e){
 					// Это нормальное завершение скрипта, если файл закончился
@@ -176,7 +165,6 @@ public class Runner {
 			}
 
 		} catch (FileNotFoundException e) {
-			// Должно быть поймано раньше, но обрабатываем для надежности
 			logger.error("Файл скрипта не найден во время выполнения: {}", filename, e);
 			scriptOk = false; // Устанавливаем флаг ошибки
 			scriptOutput.append("Ошибка: Файл скрипта не найден: ").append(filename).append("\n");
@@ -186,7 +174,7 @@ public class Runner {
 			scriptOk = false;
 			scriptOutput.append("Критическая ошибка во время выполнения скрипта: ").append(e.getMessage()).append("\n");
 		} finally {
-			// ОЧЕНЬ ВАЖНО: Восстанавливаем предыдущее состояние Ask
+			// Восстанавливаем предыдущее состояние Ask
 			Ask.restoreState(savedAskState);
 			scriptStack.remove(absolutePath);
 			logger.info("Выход из режима скрипта: {}", filename);

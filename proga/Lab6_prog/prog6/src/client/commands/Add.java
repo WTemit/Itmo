@@ -28,10 +28,6 @@ public class Add extends Command {
 				return new ExecutionResponse(false,"Создание Рабочего прервано или не удалось.");
 			}
 
-			// Валидация на клиенте не обязательна, если сервер ее выполняет,
-			// но можно добавить базовую проверку.
-			// if (!worker.validate()) { return new ExecutionResponse(false,"Поля Рабочего не валидны! Рабочий не создан!"); }
-
 			logger.debug("Создание Request для команды '{}' с объектом Worker", getName());
 			Request request = new Request(getName(), "", worker); // name, stringArg (пустой), objectArg
 			return sendRequestAndGetResponse(request);

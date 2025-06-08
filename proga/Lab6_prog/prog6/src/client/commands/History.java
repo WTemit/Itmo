@@ -21,8 +21,6 @@ public class History extends Command {
 		if (arguments.length > 1 && !arguments[1].isEmpty()) {
 			return new ExecutionResponse(false, "Неправильное количество аргументов!\nИспользование: '" + getName() + "'");
 		}
-
-		// --- Вариант 1: Показать ЛОКАЛЬНУЮ историю команд клиента ---
 		logger.debug("Отображение локальной истории команд клиента.");
 		String historyText = clientCommandManager.getCommandHistory().stream()
 				.collect(Collectors.joining("\n"));

@@ -11,7 +11,7 @@ import java.nio.ByteBuffer;
 public class SerializationUtil {
     private static final Logger logger = LogManager.getLogger(SerializationUtil.class);
 
-    // Client serializes Requests
+    // Клиент сериализует запросы (Request)
     public static ByteBuffer serializeRequest(Request request) throws IOException {
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
              ObjectOutputStream oos = new ObjectOutputStream(baos)) {
@@ -21,18 +21,17 @@ public class SerializationUtil {
             return ByteBuffer.wrap(baos.toByteArray());
         } catch (NotSerializableException e) {
             logger.error("Object not serializable in request {}: {}", request.getCommandName(), e.getMessage(), e);
-            throw e; // Re-throw specific exception
+            throw e; // Повторно выбросить конкретное исключение
         }
     }
 
-    // Client deserializes Responses
+    // Клиент десериализует ответы (Response)
     public static Response deserializeResponse(ByteBuffer buffer) throws IOException, ClassNotFoundException {
-        // Ensure the buffer has remaining data before reading
         if (!buffer.hasRemaining()) {
             logger.warn("Attempted to deserialize empty buffer.");
             throw new IOException("Received empty buffer, cannot deserialize response.");
         }
-        // Create BAIS with correct offset and limit
+        // Создать BAIS с правильным смещением и лимитом
         try (ByteArrayInputStream bais = new ByteArrayInputStream(buffer.array(), buffer.position(), buffer.remaining());
              ObjectInputStream ois = new ObjectInputStream(bais)) {
             Object obj = ois.readObject();
@@ -51,7 +50,7 @@ public class SerializationUtil {
             throw e;
         } catch(IOException | ClassNotFoundException | ClassCastException e) {
             logger.error("Deserialization failed: {}", e.getMessage(), e);
-            throw e; // Re-throw caught exceptions
+            throw e;
         }
     }
 }

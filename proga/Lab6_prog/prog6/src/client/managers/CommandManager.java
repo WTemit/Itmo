@@ -1,6 +1,6 @@
 package client.managers;
 
-import client.commands.Command; // Use client's Command interface/abstract class
+import client.commands.Command; // Используем интерфейс/абстрактный класс Command клиента
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,52 +10,52 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Manages client-side commands and history.
+ * Управляет клиентскими командами и историей.
  */
 public class CommandManager {
 	private static final Logger logger = LogManager.getLogger(CommandManager.class);
 	private final Map<String, Command> commands = new LinkedHashMap<>();
-	// Use Deque for history, limit size
-	private final Deque<String> commandHistory = new ArrayDeque<>(15); // Store last 15 commands
+	// Используем Deque для истории, ограничиваем размер
+	private final Deque<String> commandHistory = new ArrayDeque<>(15); // Храним последние 15 команд
 	private static final int HISTORY_SIZE = 15;
 
 	/**
-	 * Registers a client-side command.
-	 * @param commandName Command name.
-	 * @param command The command object.
+	 * Регистрирует клиентскую команду.
+	 * @param commandName Имя команды.
+	 * @param command Объект команды.
 	 */
 	public void register(String commandName, Command command) {
 		commands.put(commandName, command);
-		logger.trace("Registered command: {}", commandName);
+		logger.trace("Зарегистрирована команда: {}", commandName);
 	}
 
 	/**
-	 * @return The map of registered client-side commands.
+	 * @return Карта зарегистрированных клиентских команд.
 	 */
 	public Map<String, Command> getCommands() {
 		return commands;
 	}
 
 	/**
-	 * @return The command history (deque).
+	 * @return История команд (deque).
 	 */
 	public Deque<String> getCommandHistory() {
-		// Return a copy or unmodifiable view if needed externally
+		// Возвращаем копию или неизменяемое представление, если это необходимо извне
 		return new ArrayDeque<>(commandHistory);
 	}
 
 	/**
-	 * Adds a command name to the history, maintaining size limit.
-	 * @param commandName Command name executed.
+	 * Добавляет имя команды в историю, поддерживая ограничение по размеру.
+	 * @param commandName Имя выполненной команды.
 	 */
 	public void addToHistory(String commandName) {
 		if (commandName == null || commandName.trim().isEmpty()) {
-			return; // Don't add empty commands
+			return; // Не добавляем пустые команды
 		}
 		if (commandHistory.size() >= HISTORY_SIZE) {
-			commandHistory.pollLast(); // Remove the oldest command if full
+			commandHistory.pollLast(); // Удаляем самую старую команду, если история заполнена
 		}
-		commandHistory.offerFirst(commandName); // Add the new command to the front
-		logger.trace("Added to history: {}", commandName);
+		commandHistory.offerFirst(commandName); // Добавляем новую команду в начало
+		logger.trace("Добавлено в историю: {}", commandName);
 	}
 }

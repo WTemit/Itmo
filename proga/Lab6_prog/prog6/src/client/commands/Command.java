@@ -58,7 +58,6 @@ public abstract class Command implements Describable {
 	protected ExecutionResponse sendRequestAndGetResponse(Request request) {
 		Response serverResponse = networkIO.sendRequestAndReceiveResponse(request);
 		if (serverResponse == null) {
-			// NetworkIO, вероятно, залогировал ошибку (тайм-аут, ошибка ввода-вывода, ошибка десериализации)
 			return new ExecutionResponse(false, "Не удалось получить ответ от сервера. Проверьте логи.");
 		}
 		return serverResponse.getExecutionResponse();

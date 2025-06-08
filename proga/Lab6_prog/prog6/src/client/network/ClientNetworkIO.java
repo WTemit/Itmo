@@ -18,9 +18,9 @@ import java.util.Iterator;
 
 public class ClientNetworkIO {
     private static final Logger logger = LogManager.getLogger(ClientNetworkIO.class);
-    private static final int BUFFER_SIZE = 8192; // Adjust as needed
+    private static final int BUFFER_SIZE = 8192;
     private static final int MAX_RETRIES = 10;
-    private static final long RETRY_DELAY_MS = 1000; // 1 second delay
+    private static final long RETRY_DELAY_MS = 1000;
 
     private final String serverHost;
     private final int serverPort;
@@ -38,36 +38,34 @@ public class ClientNetworkIO {
         try {
             serverAddress = new InetSocketAddress(serverHost, serverPort);
             channel = DatagramChannel.open();
-            channel.configureBlocking(false); // Non-blocking mode
-            // We don't necessarily need to connect for UDP, but it simplifies sending/receiving
-            // channel.connect(serverAddress); // Optional: connect
+            channel.configureBlocking(false); // Неблокирующий режим
             selector = Selector.open();
             channel.register(selector, SelectionKey.OP_READ);
-            logger.info("DatagramChannel opened and configured for non-blocking I/O. Server target: {}", serverAddress);
+            logger.info("DatagramChannel открыт и настроен для неблокирующего ввода-вывода. Целевой сервер: {}", serverAddress);
         } catch (IOException e) {
-            logger.error("Failed to setup network channel or selector: {}", e.getMessage(), e);
-            throw e; // Propagate exception
+            logger.error("Не удалось настроить сетевой канал или селектор: {}", e.getMessage(), e);
+            throw e; // Распространить исключение
         }
     }
 
     public Response sendRequestAndReceiveResponse(Request request) {
         for (int attempt = 1; attempt <= MAX_RETRIES; attempt++) {
             try {
-                // Send Request
+                // Отправить запрос
                 ByteBuffer sendBuffer = SerializationUtil.serializeRequest(request);
-                logger.debug("Attempt {}/{}: Sending request {} to {}", attempt, MAX_RETRIES, request.getCommandName(), serverAddress);
-                channel.send(sendBuffer, serverAddress); // Use send with address if not connected
+                logger.debug("Попытка {}/{}: Отправка запроса {} на {}", attempt, MAX_RETRIES, request.getCommandName(), serverAddress);
+                channel.send(sendBuffer, serverAddress); // Использовать send с адресом, если не подключено
 
-                // Receive Response with timeout
+                // Получить ответ с тайм-аутом
                 ByteBuffer receiveBuffer = ByteBuffer.allocate(BUFFER_SIZE);
-                logger.debug("Waiting for response (max {} ms)...", RETRY_DELAY_MS * 2); // Timeout slightly longer than retry delay
+                logger.debug("Ожидание ответа (макс. {} мс)...", RETRY_DELAY_MS * 2); // Тайм-аут немного дольше, чем задержка повтора
 
-                // Use Selector for non-blocking read with timeout
-                int readyChannels = selector.select(RETRY_DELAY_MS * 2); // Timeout for select
+                // Использовать Selector для неблокирующего чтения с тайм-аутом
+                int readyChannels = selector.select(RETRY_DELAY_MS * 2); // Тайм-аут для select
 
                 if (readyChannels == 0) {
-                    logger.warn("Attempt {}/{}: No response received within timeout.", attempt, MAX_RETRIES);
-                    continue; // Go to next retry attempt
+                    logger.warn("Попытка {}/{}: Ответ не получен в течение тайм-аута.", attempt, MAX_RETRIES);
+                    continue; // Перейти к следующей попытке повтора
                 }
 
                 Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
@@ -78,75 +76,63 @@ public class ClientNetworkIO {
                         SocketAddress senderAddress = readableChannel.receive(receiveBuffer);
 
                         if (senderAddress == null) {
-                            logger.warn("Attempt {}/{}: Received null sender address (spurious wakeup?). Retrying.", attempt, MAX_RETRIES);
+                            logger.warn("Попытка {}/{}: Получен нулевой адрес отправителя (ложное пробуждение?). Повторная попытка.", attempt, MAX_RETRIES);
                             keyIterator.remove();
-                            continue; // Should not happen often
+                            continue; // Не должно происходить часто
                         }
 
-                        // Optional: Check if response is from the expected server
-                        // if (!serverAddress.equals(senderAddress)) {
-                        //     logger.warn("Received packet from unexpected source: {}", senderAddress);
-                        //     keyIterator.remove(); // Consume event
-                        //     receiveBuffer.clear(); // Clear buffer for next potential read
-                        //     continue; // Ignore packet and wait again (or retry)
-                        // }
-
-                        receiveBuffer.flip(); // Prepare buffer for reading
-                        logger.debug("Attempt {}/{}: Received {} bytes from {}", attempt, MAX_RETRIES, receiveBuffer.limit(), senderAddress);
+                        receiveBuffer.flip(); // Подготовить буфер для чтения
+                        logger.debug("Попытка {}/{}: Получено {} байт от {}", attempt, MAX_RETRIES, receiveBuffer.limit(), senderAddress);
 
                         try {
                             Response response = SerializationUtil.deserializeResponse(receiveBuffer);
-                            keyIterator.remove(); // Processed the key
-                            return response; // Success!
+                            keyIterator.remove(); // Обработали ключ
+                            return response; // Успех!
                         } catch (IOException | ClassNotFoundException | ClassCastException e) {
-                            logger.error("Attempt {}/{}: Failed to deserialize response: {}", attempt, MAX_RETRIES, e.getMessage(), e);
-                            // Don't retry on deserialization error, likely corrupted data
-                            keyIterator.remove(); // Processed the key
-                            return null; // Indicate error
+                            logger.error("Попытка {}/{}: Не удалось десериализовать ответ: {}", attempt, MAX_RETRIES, e.getMessage(), e);
+                            keyIterator.remove(); // Обработали ключ
+                            return null; // Указать ошибку
                         }
                     }
-                    keyIterator.remove(); // Remove even if not readable (shouldn't happen here)
+                    keyIterator.remove();
                 }
-                // If loop finishes without returning, something went wrong with selection keys
-                logger.warn("Selector loop finished without processing readable key (Attempt {}).", attempt);
+                logger.warn("Цикл селектора завершился без обработки читаемого ключа (Попытка {}).", attempt);
 
             } catch (SocketTimeoutException e) {
-                logger.warn("Attempt {}/{}: Socket timed out waiting for response.", attempt, MAX_RETRIES);
+                logger.warn("Попытка {}/{}: Время ожидания сокета истекло при ожидании ответа.", attempt, MAX_RETRIES);
             } catch (IOException e) {
-                logger.error("Attempt {}/{}: Network I/O error: {}", attempt, MAX_RETRIES, e.getMessage(), e);
-                // Consider if retry is appropriate for this type of IOException
-                // For now, we break and return null on general IO errors
+                logger.error("Попытка {}/{}: Ошибка сетевого ввода-вывода: {}", attempt, MAX_RETRIES, e.getMessage(), e);
                 return null;
             }
 
-            // Wait before retrying
+            // Подождать перед повторной попыткой
             if (attempt < MAX_RETRIES) {
                 try {
                     Thread.sleep(RETRY_DELAY_MS);
                 } catch (InterruptedException ie) {
                     Thread.currentThread().interrupt();
-                    logger.warn("Retry delay interrupted.");
-                    return null; // Stop if interrupted
+                    logger.warn("Задержка повтора прервана.");
+                    return null; // Остановиться, если прервано
                 }
             }
         }
 
-        logger.error("Failed to receive response from server after {} attempts.", MAX_RETRIES);
-        return null; // Failed after all retries
+        logger.error("Не удалось получить ответ от сервера после {} попыток.", MAX_RETRIES);
+        return null; // Не удалось после всех повторных попыток
     }
 
     public void close() {
         try {
             if (selector != null && selector.isOpen()) {
                 selector.close();
-                logger.info("Selector closed.");
+                logger.info("Селектор закрыт.");
             }
             if (channel != null && channel.isOpen()) {
                 channel.close();
-                logger.info("DatagramChannel closed.");
+                logger.info("DatagramChannel закрыт.");
             }
         } catch (IOException e) {
-            logger.error("Error closing network resources: {}", e.getMessage(), e);
+            logger.error("Ошибка при закрытии сетевых ресурсов: {}", e.getMessage(), e);
         }
     }
 }

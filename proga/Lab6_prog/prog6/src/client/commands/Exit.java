@@ -7,7 +7,6 @@ import common.util.ExecutionResponse;
 public class Exit extends Command {
 
 	public Exit(ClientNetworkIO networkIO, StandardConsole console) {
-		// NetworkIO и Console здесь строго не нужны, но передаются для единообразия
 		super("exit", "завершить программу клиента", networkIO, console);
 	}
 

@@ -19,8 +19,6 @@ public class CountByStartDate extends Command {
             return new ExecutionResponse(false, "Неправильное количество аргументов!\nИспользование: '" + getName() + " yyyy-MM-ddTHH:mm:ss+Zone[Region]'");
         }
         String dateString = arguments[1].trim();
-
-        // Простая проверка формата на клиенте (сервер все равно проверит)
         try {
             ZonedDateTime.parse(dateString); // Попытка парсинга
         } catch (DateTimeParseException e) {
