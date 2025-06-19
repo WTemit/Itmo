@@ -1,0 +1,372 @@
+2025-05-17 13:53:58.401 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 13:53:58.407 [main] INFO  client.ClientMain - Attempting to connect to server at localhost:14881
+2025-05-17 13:53:58.505 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: localhost/127.0.0.1:14881
+2025-05-17 13:53:58.507 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 13:53:58.508 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 13:54:01.731 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-05-17 13:54:01.731 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-05-17 13:54:01.740 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-05-17 13:54:01.740 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Sending request show to localhost/127.0.0.1:14881
+2025-05-17 13:54:01.741 [main] DEBUG client.network.ClientNetworkIO - Waiting for response (max 2000 ms)...
+2025-05-17 13:54:01.745 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Received 216 bytes from /127.0.0.1:14881
+2025-05-17 13:54:01.751 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 16
+2025-05-17 13:55:31.345 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-05-17 13:55:31.351 [main] INFO  client.ClientMain - Attempting to connect to server at 88.201.133.173:14881
+2025-05-17 13:55:31.453 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: /88.201.133.173:14881
+2025-05-17 13:55:31.455 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-05-17 13:55:31.456 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-05-17 13:55:36.109 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-05-17 13:55:36.110 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-05-17 13:55:36.118 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-05-17 13:55:36.119 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Sending request show to /88.201.133.173:14881
+2025-05-17 13:55:36.120 [main] DEBUG client.network.ClientNetworkIO - Waiting for response (max 2000 ms)...
+2025-05-17 13:55:36.127 [main] DEBUG client.network.ClientNetworkIO - Attempt 1/10: Received 216 bytes from /88.201.133.173:14881
+2025-05-17 13:55:36.133 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 16
+2025-05-17 13:55:42.866 [main] WARN  client.util.Runner - Поток ввода закрыт (Ctrl+D?). Выход.
+2025-05-17 13:55:42.866 [main] INFO  client.util.Runner - Выход из интерактивного режима.
+2025-05-17 13:55:42.868 [main] INFO  client.ClientMain - Client shutting down...
+2025-05-17 13:55:42.869 [main] INFO  client.network.ClientNetworkIO - Selector closed.
+2025-06-08 13:18:15.322 [main] INFO  client.ClientMain - Starting Lab 6 Client...
+2025-06-08 13:18:15.329 [main] INFO  client.ClientMain - Attempting to connect to server at 88.201.133.173:14881
+2025-06-08 13:18:15.453 [main] INFO  client.network.ClientNetworkIO - DatagramChannel opened and configured for non-blocking I/O. Server target: /88.201.133.173:14881
+2025-06-08 13:18:15.455 [main] INFO  client.ClientMain - Client setup complete. Starting interactive mode.
+2025-06-08 13:18:15.456 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-06-08 13:18:41.923 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-08 13:18:41.923 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-08 13:18:41.924 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-08 13:18:41.925 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-08 13:18:41.925 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-08 13:18:41.926 [main] WARN  client.util.Ask - Нет следующей строки для чтения (ScriptMode: true).
+2025-06-08 13:18:41.926 [main] ERROR client.util.Ask - Поток ввода неожиданно завершился.
+java.util.NoSuchElementException: Нет доступных строк для чтения.
+	at client.util.Ask.readLine(Ask.java:97) ~[prog6.jar:?]
+	at client.util.Ask.askString(Ask.java:124) [prog6.jar:?]
+	at client.util.Ask.askWorker(Ask.java:264) [prog6.jar:?]
+	at client.commands.Add.apply(Add.java:25) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:221) [prog6.jar:?]
+	at client.util.Runner.scriptMode(Runner.java:140) [prog6.jar:?]
+	at client.commands.ExecuteScript.apply(ExecuteScript.java:27) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:221) [prog6.jar:?]
+	at client.util.Runner.interactiveMode(Runner.java:65) [prog6.jar:?]
+	at client.ClientMain.main(ClientMain.java:74) [prog6.jar:?]
+2025-06-08 13:18:41.934 [main] ERROR client.util.Ask - Ошибка ввода при создании Worker.
+java.util.NoSuchElementException: Нет доступных строк для чтения.
+	at client.util.Ask.readLine(Ask.java:97) ~[prog6.jar:?]
+	at client.util.Ask.askString(Ask.java:124) ~[prog6.jar:?]
+	at client.util.Ask.askWorker(Ask.java:264) [prog6.jar:?]
+	at client.commands.Add.apply(Add.java:25) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:221) [prog6.jar:?]
+	at client.util.Runner.scriptMode(Runner.java:140) [prog6.jar:?]
+	at client.commands.ExecuteScript.apply(ExecuteScript.java:27) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:221) [prog6.jar:?]
+	at client.util.Runner.interactiveMode(Runner.java:65) [prog6.jar:?]
+	at client.ClientMain.main(ClientMain.java:74) [prog6.jar:?]
+2025-06-08 13:18:41.936 [main] WARN  client.util.Runner - Команда [add] в скрипте [test1.txt] не удалась: Создание Рабочего прервано или не удалось.
+2025-06-08 13:18:41.936 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
+2025-06-11 11:17:11.512 [main] INFO  client.ClientMain - Запуск клиента Лабораторной работы №6...
+2025-06-11 11:17:11.521 [main] INFO  client.ClientMain - Попытка подключения к серверу по адресу 88.201.133.173:14881
+2025-06-11 11:17:11.635 [main] INFO  client.network.ClientNetworkIO - DatagramChannel открыт и настроен для неблокирующего ввода-вывода. Целевой сервер: /88.201.133.173:14881
+2025-06-11 11:17:11.637 [main] INFO  client.ClientMain - Настройка клиента завершена. Запуск интерактивного режима.
+2025-06-11 11:17:11.638 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-06-11 11:17:13.988 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-11 11:17:13.989 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-11 11:17:13.989 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-11 11:17:13.991 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-11 11:17:13.991 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-11 11:17:13.992 [main] ERROR client.util.Ask - Поток ввода неожиданно завершился.
+java.util.NoSuchElementException: Пустая строка в скрипте не допускается для этого поля.
+	at client.util.Ask.askString(Ask.java:127) [prog6.jar:?]
+	at client.util.Ask.askWorker(Ask.java:276) [prog6.jar:?]
+	at client.commands.Add.apply(Add.java:25) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:209) [prog6.jar:?]
+	at client.util.Runner.scriptMode(Runner.java:132) [prog6.jar:?]
+	at client.commands.ExecuteScript.apply(ExecuteScript.java:27) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:209) [prog6.jar:?]
+	at client.util.Runner.interactiveMode(Runner.java:57) [prog6.jar:?]
+	at client.ClientMain.main(ClientMain.java:69) [prog6.jar:?]
+2025-06-11 11:17:14.001 [main] ERROR client.util.Ask - Ошибка ввода при создании Worker.
+java.util.NoSuchElementException: Пустая строка в скрипте не допускается для этого поля.
+	at client.util.Ask.askString(Ask.java:127) ~[prog6.jar:?]
+	at client.util.Ask.askWorker(Ask.java:276) [prog6.jar:?]
+	at client.commands.Add.apply(Add.java:25) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:209) [prog6.jar:?]
+	at client.util.Runner.scriptMode(Runner.java:132) [prog6.jar:?]
+	at client.commands.ExecuteScript.apply(ExecuteScript.java:27) [prog6.jar:?]
+	at client.util.Runner.launchCommand(Runner.java:209) [prog6.jar:?]
+	at client.util.Runner.interactiveMode(Runner.java:57) [prog6.jar:?]
+	at client.ClientMain.main(ClientMain.java:69) [prog6.jar:?]
+2025-06-11 11:17:14.002 [main] WARN  client.util.Runner - Команда [add] в скрипте [test1.txt] не удалась: Создание Рабочего прервано или не удалось.
+2025-06-11 11:17:14.003 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [Иван] с аргументами [Петров]
+2025-06-11 11:17:14.007 [main] WARN  client.util.Runner - Команда 'Иван' не найдена.
+2025-06-11 11:17:14.007 [main] WARN  client.util.Runner - Команда [Иван] в скрипте [test1.txt] не удалась: Команда 'Иван' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.008 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [100] с аргументами []
+2025-06-11 11:17:14.008 [main] WARN  client.util.Runner - Команда '100' не найдена.
+2025-06-11 11:17:14.008 [main] WARN  client.util.Runner - Команда [100] в скрипте [test1.txt] не удалась: Команда '100' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.009 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [200] с аргументами []
+2025-06-11 11:17:14.009 [main] WARN  client.util.Runner - Команда '200' не найдена.
+2025-06-11 11:17:14.009 [main] WARN  client.util.Runner - Команда [200] в скрипте [test1.txt] не удалась: Команда '200' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.010 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [50000.50] с аргументами []
+2025-06-11 11:17:14.010 [main] WARN  client.util.Runner - Команда '50000.50' не найдена.
+2025-06-11 11:17:14.010 [main] WARN  client.util.Runner - Команда [50000.50] в скрипте [test1.txt] не удалась: Команда '50000.50' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.011 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [ENGINEER] с аргументами []
+2025-06-11 11:17:14.011 [main] WARN  client.util.Runner - Команда 'ENGINEER' не найдена.
+2025-06-11 11:17:14.011 [main] WARN  client.util.Runner - Команда [ENGINEER] в скрипте [test1.txt] не удалась: Команда 'ENGINEER' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.012 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [1000000] с аргументами []
+2025-06-11 11:17:14.012 [main] WARN  client.util.Runner - Команда '1000000' не найдена.
+2025-06-11 11:17:14.012 [main] WARN  client.util.Runner - Команда [1000000] в скрипте [test1.txt] не удалась: Команда '1000000' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.013 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [PUBLIC] с аргументами []
+2025-06-11 11:17:14.013 [main] WARN  client.util.Runner - Команда 'PUBLIC' не найдена.
+2025-06-11 11:17:14.014 [main] WARN  client.util.Runner - Команда [PUBLIC] в скрипте [test1.txt] не удалась: Команда 'PUBLIC' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.014 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [ул.] с аргументами [Ленина, д. 1]
+2025-06-11 11:17:14.014 [main] WARN  client.util.Runner - Команда 'ул.' не найдена.
+2025-06-11 11:17:14.015 [main] WARN  client.util.Runner - Команда [ул.] в скрипте [test1.txt] не удалась: Команда 'ул.' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.015 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [59.93] с аргументами []
+2025-06-11 11:17:14.015 [main] WARN  client.util.Runner - Команда '59.93' не найдена.
+2025-06-11 11:17:14.016 [main] WARN  client.util.Runner - Команда [59.93] в скрипте [test1.txt] не удалась: Команда '59.93' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.016 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [30] с аргументами []
+2025-06-11 11:17:14.016 [main] WARN  client.util.Runner - Команда '30' не найдена.
+2025-06-11 11:17:14.017 [main] WARN  client.util.Runner - Команда [30] в скрипте [test1.txt] не удалась: Команда '30' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.018 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [Санкт-Петербург] с аргументами []
+2025-06-11 11:17:14.020 [main] WARN  client.util.Runner - Команда 'Санкт-Петербург' не найдена.
+2025-06-11 11:17:14.021 [main] WARN  client.util.Runner - Команда [Санкт-Петербург] в скрипте [test1.txt] не удалась: Команда 'Санкт-Петербург' не найдена. Наберите 'help' для справки.
+2025-06-11 11:17:14.021 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [info] с аргументами []
+2025-06-11 11:17:14.022 [main] DEBUG client.util.Runner - Запуск команды: info
+2025-06-11 11:17:14.022 [main] DEBUG client.commands.Command - Создание Request для команды 'info'
+2025-06-11 11:17:14.033 [main] DEBUG client.util.SerializationUtil - Serialized Request: info (163 bytes)
+2025-06-11 11:17:14.034 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса info на /88.201.133.173:14881
+2025-06-11 11:17:14.036 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-11 11:17:14.065 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 501 байт от /88.201.133.173:14881
+2025-06-11 11:17:14.076 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 186
+2025-06-11 11:17:14.077 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
+2025-06-11 11:18:23.984 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-11 11:18:23.984 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-11 11:18:23.985 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-11 11:18:23.985 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-11 11:18:23.986 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-11 11:18:24.001 [main] DEBUG client.commands.Command - Создание Request для команды 'add' с объектом Worker
+2025-06-11 11:18:24.011 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (1422 bytes)
+2025-06-11 11:18:24.011 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-11 11:18:24.014 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-11 11:18:24.029 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 241 байт от /88.201.133.173:14881
+2025-06-11 11:18:24.030 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 33
+2025-06-11 11:18:24.031 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [info] с аргументами []
+2025-06-11 11:18:24.031 [main] DEBUG client.util.Runner - Запуск команды: info
+2025-06-11 11:18:24.032 [main] DEBUG client.commands.Command - Создание Request для команды 'info'
+2025-06-11 11:18:24.032 [main] DEBUG client.util.SerializationUtil - Serialized Request: info (163 bytes)
+2025-06-11 11:18:24.033 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса info на /88.201.133.173:14881
+2025-06-11 11:18:24.033 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-11 11:18:24.039 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 501 байт от /88.201.133.173:14881
+2025-06-11 11:18:24.040 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 186
+2025-06-11 11:18:24.041 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
+2025-06-11 11:20:19.975 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-11 11:20:19.975 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-11 11:20:19.975 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-11 11:20:19.976 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-11 11:20:19.977 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-11 11:20:20.010 [main] DEBUG client.commands.Command - Создание Request для команды 'add' с объектом Worker
+2025-06-11 11:20:20.014 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-11 11:20:20.014 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-11 11:20:20.015 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-11 11:20:20.025 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 241 байт от /88.201.133.173:14881
+2025-06-11 11:20:20.026 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 33
+2025-06-11 11:20:20.026 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [info] с аргументами []
+2025-06-11 11:20:20.026 [main] DEBUG client.util.Runner - Запуск команды: info
+2025-06-11 11:20:20.027 [main] DEBUG client.commands.Command - Создание Request для команды 'info'
+2025-06-11 11:20:20.027 [main] DEBUG client.util.SerializationUtil - Serialized Request: info (163 bytes)
+2025-06-11 11:20:20.028 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса info на /88.201.133.173:14881
+2025-06-11 11:20:20.028 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-11 11:20:20.032 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 501 байт от /88.201.133.173:14881
+2025-06-11 11:20:20.033 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 186
+2025-06-11 11:20:20.033 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
+2025-06-11 11:20:25.497 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-06-11 11:20:25.497 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-06-11 11:20:25.498 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-11 11:20:25.500 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-11 11:20:25.500 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-11 11:20:25.516 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 41907 байт от /88.201.133.173:14881
+2025-06-11 11:20:25.519 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 22465
+2025-06-17 16:48:53.590 [main] INFO  client.ClientMain - Запуск клиента Лабораторной работы №6...
+2025-06-17 16:48:53.597 [main] INFO  client.ClientMain - Попытка подключения к серверу по адресу 88.201.133.173:14881
+2025-06-17 16:48:53.730 [main] INFO  client.network.ClientNetworkIO - DatagramChannel открыт и настроен для неблокирующего ввода-вывода. Целевой сервер: /88.201.133.173:14881
+2025-06-17 16:48:53.732 [main] INFO  client.ClientMain - Настройка клиента завершена. Запуск интерактивного режима.
+2025-06-17 16:48:53.733 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-06-17 16:49:09.508 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-17 16:49:09.508 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-17 16:49:09.509 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-17 16:49:09.510 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-17 16:49:09.510 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-17 16:49:09.549 [main] DEBUG client.commands.Command - Создание Request для команды 'add' с объектом Worker
+2025-06-17 16:49:09.568 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:49:09.568 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:49:09.570 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:09.622 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 241 байт от /88.201.133.173:14881
+2025-06-17 16:49:09.629 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 33
+2025-06-17 16:49:09.630 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [show] с аргументами []
+2025-06-17 16:49:09.630 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-06-17 16:49:09.630 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-06-17 16:49:09.631 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:09.631 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:09.632 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:11.632 [main] WARN  client.network.ClientNetworkIO - Попытка 1/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:11.632 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:11.633 [main] DEBUG client.network.ClientNetworkIO - Попытка 2/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:11.634 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:13.635 [main] WARN  client.network.ClientNetworkIO - Попытка 2/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:13.635 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:13.636 [main] DEBUG client.network.ClientNetworkIO - Попытка 3/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:13.637 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:15.637 [main] WARN  client.network.ClientNetworkIO - Попытка 3/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:15.637 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:15.638 [main] DEBUG client.network.ClientNetworkIO - Попытка 4/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:15.639 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:17.640 [main] WARN  client.network.ClientNetworkIO - Попытка 4/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:17.640 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:17.641 [main] DEBUG client.network.ClientNetworkIO - Попытка 5/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:17.642 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:19.643 [main] WARN  client.network.ClientNetworkIO - Попытка 5/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:19.643 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:19.644 [main] DEBUG client.network.ClientNetworkIO - Попытка 6/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:19.645 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:21.645 [main] WARN  client.network.ClientNetworkIO - Попытка 6/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:36.355 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:36.357 [main] DEBUG client.network.ClientNetworkIO - Попытка 7/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:36.357 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:38.357 [main] WARN  client.network.ClientNetworkIO - Попытка 7/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:38.357 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:38.357 [main] DEBUG client.network.ClientNetworkIO - Попытка 8/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:38.358 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:40.359 [main] WARN  client.network.ClientNetworkIO - Попытка 8/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:40.359 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:40.360 [main] DEBUG client.network.ClientNetworkIO - Попытка 9/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:40.360 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:42.361 [main] WARN  client.network.ClientNetworkIO - Попытка 9/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:42.361 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:49:42.362 [main] DEBUG client.network.ClientNetworkIO - Попытка 10/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:49:42.363 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:49:44.363 [main] WARN  client.network.ClientNetworkIO - Попытка 10/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:49:44.363 [main] ERROR client.network.ClientNetworkIO - Не удалось получить ответ от сервера после 10 попыток.
+2025-06-17 16:49:44.364 [main] WARN  client.util.Runner - Команда [show] в скрипте [test1.txt] не удалась: Не удалось получить ответ от сервера. Проверьте логи.
+2025-06-17 16:49:44.365 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
+2025-06-17 16:50:36.929 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-06-17 16:50:36.930 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-06-17 16:50:36.930 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:36.931 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:36.931 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:38.931 [main] WARN  client.network.ClientNetworkIO - Попытка 1/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:38.931 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:38.933 [main] DEBUG client.network.ClientNetworkIO - Попытка 2/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:38.933 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:40.933 [main] WARN  client.network.ClientNetworkIO - Попытка 2/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:40.933 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:40.934 [main] DEBUG client.network.ClientNetworkIO - Попытка 3/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:40.934 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:42.936 [main] WARN  client.network.ClientNetworkIO - Попытка 3/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:42.936 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:42.937 [main] DEBUG client.network.ClientNetworkIO - Попытка 4/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:42.938 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:44.939 [main] WARN  client.network.ClientNetworkIO - Попытка 4/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:44.939 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:44.941 [main] DEBUG client.network.ClientNetworkIO - Попытка 5/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:44.942 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:46.942 [main] WARN  client.network.ClientNetworkIO - Попытка 5/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:46.942 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:46.943 [main] DEBUG client.network.ClientNetworkIO - Попытка 6/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:46.944 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:48.944 [main] WARN  client.network.ClientNetworkIO - Попытка 6/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:48.944 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:48.945 [main] DEBUG client.network.ClientNetworkIO - Попытка 7/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:48.946 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:50.946 [main] WARN  client.network.ClientNetworkIO - Попытка 7/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:50.946 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:50.948 [main] DEBUG client.network.ClientNetworkIO - Попытка 8/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:50.949 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:52.951 [main] WARN  client.network.ClientNetworkIO - Попытка 8/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:52.952 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:52.958 [main] DEBUG client.network.ClientNetworkIO - Попытка 9/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:52.961 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:54.963 [main] WARN  client.network.ClientNetworkIO - Попытка 9/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:54.963 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:50:54.965 [main] DEBUG client.network.ClientNetworkIO - Попытка 10/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:50:54.965 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:50:56.965 [main] WARN  client.network.ClientNetworkIO - Попытка 10/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:50:56.965 [main] ERROR client.network.ClientNetworkIO - Не удалось получить ответ от сервера после 10 попыток.
+2025-06-17 16:51:21.200 [main] DEBUG client.util.Runner - Запуск команды: clear
+2025-06-17 16:51:21.201 [main] DEBUG client.commands.Command - Создание Request для команды 'clear'
+2025-06-17 16:51:21.202 [main] DEBUG client.util.SerializationUtil - Serialized Request: clear (164 bytes)
+2025-06-17 16:51:21.202 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса clear на /88.201.133.173:14881
+2025-06-17 16:51:21.202 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:51:21.233 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 235 байт от /88.201.133.173:14881
+2025-06-17 16:51:21.234 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 26
+2025-06-17 16:51:24.966 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-17 16:51:24.966 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-17 16:51:24.967 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-17 16:51:24.967 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-17 16:51:24.967 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-17 16:51:24.990 [main] DEBUG client.commands.Command - Создание Request для команды 'add' с объектом Worker
+2025-06-17 16:51:24.993 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:51:24.993 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:51:24.995 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:51:25.012 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 241 байт от /88.201.133.173:14881
+2025-06-17 16:51:25.012 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 33
+2025-06-17 16:51:25.013 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [show] с аргументами []
+2025-06-17 16:51:25.013 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-06-17 16:51:25.013 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-06-17 16:51:25.014 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:51:25.014 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:51:25.015 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:51:25.027 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 40866 байт от /88.201.133.173:14881
+2025-06-17 16:51:25.029 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 21457
+2025-06-17 16:51:25.029 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
+2025-06-17 16:51:43.111 [main] WARN  client.util.Runner - Команда 'claer' не найдена.
+2025-06-17 16:51:46.267 [main] DEBUG client.util.Runner - Запуск команды: clear
+2025-06-17 16:51:46.267 [main] DEBUG client.commands.Command - Создание Request для команды 'clear'
+2025-06-17 16:51:46.267 [main] DEBUG client.util.SerializationUtil - Serialized Request: clear (164 bytes)
+2025-06-17 16:51:46.268 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса clear на /88.201.133.173:14881
+2025-06-17 16:51:46.268 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:51:46.272 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 235 байт от /88.201.133.173:14881
+2025-06-17 16:51:46.273 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 26
+2025-06-17 16:52:12.206 [main] INFO  client.ClientMain - Запуск клиента Лабораторной работы №6...
+2025-06-17 16:52:12.213 [main] INFO  client.ClientMain - Попытка подключения к серверу по адресу 88.201.133.173:14881
+2025-06-17 16:52:12.314 [main] INFO  client.network.ClientNetworkIO - DatagramChannel открыт и настроен для неблокирующего ввода-вывода. Целевой сервер: /88.201.133.173:14881
+2025-06-17 16:52:12.316 [main] INFO  client.ClientMain - Настройка клиента завершена. Запуск интерактивного режима.
+2025-06-17 16:52:12.316 [main] INFO  client.util.Runner - Вход в интерактивный режим...
+2025-06-17 16:59:20.546 [main] DEBUG client.util.Runner - Запуск команды: execute_script
+2025-06-17 16:59:20.547 [main] INFO  client.commands.Command - Команда ExecuteScript вызвана для файла: test1.txt
+2025-06-17 16:59:20.547 [main] INFO  client.util.Runner - Вход в режим скрипта: test1.txt
+2025-06-17 16:59:20.549 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [add] с аргументами []
+2025-06-17 16:59:20.549 [main] DEBUG client.util.Runner - Запуск команды: add
+2025-06-17 16:59:20.597 [main] DEBUG client.commands.Command - Создание Request для команды 'add' с объектом Worker
+2025-06-17 16:59:20.615 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:59:20.615 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:59:20.617 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:22.619 [main] WARN  client.network.ClientNetworkIO - Попытка 1/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:59:22.622 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:59:22.622 [main] DEBUG client.network.ClientNetworkIO - Попытка 2/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:59:22.624 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:24.625 [main] WARN  client.network.ClientNetworkIO - Попытка 2/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:59:24.628 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:59:24.628 [main] DEBUG client.network.ClientNetworkIO - Попытка 3/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:59:24.629 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:26.630 [main] WARN  client.network.ClientNetworkIO - Попытка 3/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:59:26.632 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:59:26.632 [main] DEBUG client.network.ClientNetworkIO - Попытка 4/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:59:26.633 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:28.633 [main] WARN  client.network.ClientNetworkIO - Попытка 4/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:59:28.639 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:59:28.640 [main] DEBUG client.network.ClientNetworkIO - Попытка 5/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:59:28.646 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:30.652 [main] WARN  client.network.ClientNetworkIO - Попытка 5/10: Ответ не получен в течение тайм-аута.
+2025-06-17 16:59:30.653 [main] DEBUG client.util.SerializationUtil - Serialized Request: add (41721 bytes)
+2025-06-17 16:59:30.655 [main] DEBUG client.network.ClientNetworkIO - Попытка 6/10: Отправка запроса add на /88.201.133.173:14881
+2025-06-17 16:59:30.656 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:30.713 [main] DEBUG client.network.ClientNetworkIO - Попытка 6/10: Получено 241 байт от /88.201.133.173:14881
+2025-06-17 16:59:30.719 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 33
+2025-06-17 16:59:30.720 [main] DEBUG client.util.Runner - Выполнение команды скрипта: [show] с аргументами []
+2025-06-17 16:59:30.720 [main] DEBUG client.util.Runner - Запуск команды: show
+2025-06-17 16:59:30.721 [main] DEBUG client.commands.Command - Создание Request для команды 'show'
+2025-06-17 16:59:30.721 [main] DEBUG client.util.SerializationUtil - Serialized Request: show (163 bytes)
+2025-06-17 16:59:30.722 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Отправка запроса show на /88.201.133.173:14881
+2025-06-17 16:59:30.723 [main] DEBUG client.network.ClientNetworkIO - Ожидание ответа (макс. 2000 мс)...
+2025-06-17 16:59:30.735 [main] DEBUG client.network.ClientNetworkIO - Попытка 1/10: Получено 40866 байт от /88.201.133.173:14881
+2025-06-17 16:59:30.739 [main] DEBUG client.util.SerializationUtil - Deserialized Response. Success: true, Message length: 21457
+2025-06-17 16:59:30.740 [main] INFO  client.util.Runner - Выход из режима скрипта: test1.txt
