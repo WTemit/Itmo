@@ -1,0 +1,212 @@
+2025-05-18 21:51:32.384 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:51:32.483 [main] FATAL server.ServerMain - Ошибка инициализации сервера: Address already in use: bind
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:511) ~[?:?]
+	at sun.nio.ch.DatagramChannelImpl.bindInternal(DatagramChannelImpl.java:1241) ~[?:?]
+	at sun.nio.ch.DatagramChannelImpl.bind(DatagramChannelImpl.java:1215) ~[?:?]
+	at server.ServerMain.initialize(ServerMain.java:92) [prog6_server.jar:?]
+	at server.ServerMain.main(ServerMain.java:81) [prog6_server.jar:?]
+2025-05-18 21:51:39.128 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:51:39.239 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-18 21:51:39.241 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-18 21:51:39.241 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-18 21:51:39.242 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-18 21:51:39.262 [main] WARN  server.ServerMain - Ошибка преобразования числа для поля 'x', значение 'null': For input string: "null"
+2025-05-18 21:51:39.262 [main] WARN  server.ServerMain - Ошибка парсинга поля 'x' со значением 'null' для Worker (ID 1): Неверный числовой формат для поля x
+2025-05-18 21:51:39.263 [main] WARN  server.ServerMain - Ошибка преобразования числа для поля 'y', значение 'null': For input string: "null"
+2025-05-18 21:51:39.263 [main] WARN  server.ServerMain - Ошибка парсинга поля 'y' со значением 'null' для Worker (ID 1): Неверный числовой формат для поля y
+2025-05-18 21:51:39.264 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-18 21:51:39.265 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-18 21:51:39.265 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-18 21:51:39.268 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-18 21:51:39.270 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-18 21:51:39.270 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-18 21:51:39.271 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-18 21:52:46.912 [ServerConsoleThread] INFO  server.ServerConsole - Ввод для серверной консоли завершен.
+2025-05-18 21:52:46.913 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль завершила свою работу.
+2025-05-18 21:52:46.915 [Thread-0] INFO  server.ServerMain - Получен сигнал завершения. Сохранение коллекции...
+2025-05-18 21:52:51.713 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:52:51.818 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-18 21:52:51.821 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-18 21:52:51.822 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-18 21:52:51.825 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-18 21:52:51.850 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-18 21:52:51.851 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-18 21:52:51.852 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-18 21:52:51.854 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-18 21:52:51.856 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-18 21:52:51.856 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-18 21:52:51.857 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-18 21:53:13.286 [ServerConsoleThread] INFO  server.ServerConsole - Ввод для серверной консоли завершен.
+2025-05-18 21:53:13.287 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль завершила свою работу.
+2025-05-18 21:53:13.290 [Thread-0] INFO  server.ServerMain - Получен сигнал завершения. Сохранение коллекции...
+2025-05-18 21:53:54.902 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:53:55.004 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-18 21:53:55.007 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-18 21:53:55.008 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-18 21:53:55.008 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-18 21:53:55.030 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-18 21:53:55.031 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-18 21:53:55.031 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-18 21:53:55.033 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-18 21:53:55.034 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-18 21:53:55.034 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-18 21:53:55.036 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-18 21:53:58.411 [ServerConsoleThread] INFO  server.ServerConsole - Ввод для серверной консоли завершен.
+2025-05-18 21:53:58.412 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль завершила свою работу.
+2025-05-18 21:53:58.415 [Thread-0] INFO  server.ServerMain - Получен сигнал завершения. Сохранение коллекции...
+2025-05-18 21:54:59.146 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:54:59.260 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-18 21:54:59.263 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-18 21:54:59.264 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-18 21:54:59.264 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-18 21:54:59.283 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-18 21:54:59.283 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-18 21:54:59.283 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-18 21:54:59.286 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-18 21:54:59.286 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-18 21:54:59.287 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-18 21:54:59.287 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-18 21:55:02.111 [ServerConsoleThread] INFO  server.ServerConsole - Ввод для серверной консоли завершен.
+2025-05-18 21:55:02.111 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль завершила свою работу.
+2025-05-18 21:55:02.114 [Thread-0] INFO  server.ServerMain - Получен сигнал завершения. Сохранение коллекции...
+2025-05-18 21:55:15.550 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:55:15.667 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-18 21:55:15.670 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-18 21:55:15.670 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-18 21:55:15.671 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-18 21:55:15.690 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-18 21:55:15.690 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-18 21:55:15.690 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-18 21:55:15.692 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-18 21:55:15.693 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-18 21:55:15.693 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-18 21:55:15.694 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-18 21:55:18.192 [main] INFO  server.ServerMain - Получен пакет размером 163 байт от /88.201.133.173:49815
+2025-05-18 21:55:18.205 [main] INFO  server.ServerMain - Десериализован запрос: Request{commandName='show', stringArg='', objectArg=null} от /88.201.133.173:49815
+2025-05-18 21:55:18.205 [main] INFO  server.handlers.CommandHandler - Обработка команды 'show'
+2025-05-18 21:55:18.208 [main] INFO  server.handlers.CommandHandler - Команда 'show' выполнена с результатом: true
+2025-05-18 21:55:18.213 [main] INFO  server.ServerMain - Отправлен ответ размером 517 байт клиенту /88.201.133.173:49815: Response{executionResponse=ExecutionResponse{exitCode=true, message='Worker #1
+  Name: kjhefhweif
+  Coordinates: 233;543
+  Creation Date: 2025-05-18T21:55:15.677844800+03:00[GMT+03:00]
+  Salary: 34565.0
+  Start Date: 2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]
+  End Date: 2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]
+  Position: LABORER
+  Organization: 344546;TRUST;23e45;null;null;2345'}}
+2025-05-18 21:56:10.483 [main] INFO  server.ServerMain - Получен пакет размером 163 байт от /88.201.133.173:49815
+2025-05-18 21:56:10.483 [main] INFO  server.ServerMain - Десериализован запрос: Request{commandName='show', stringArg='', objectArg=null} от /88.201.133.173:49815
+2025-05-18 21:56:10.485 [main] INFO  server.handlers.CommandHandler - Обработка команды 'show'
+2025-05-18 21:56:10.485 [main] INFO  server.handlers.CommandHandler - Команда 'show' выполнена с результатом: true
+2025-05-18 21:56:10.486 [main] INFO  server.ServerMain - Отправлен ответ размером 517 байт клиенту /88.201.133.173:49815: Response{executionResponse=ExecutionResponse{exitCode=true, message='Worker #1
+  Name: kjhefhweif
+  Coordinates: 233;543
+  Creation Date: 2025-05-18T21:55:15.677844800+03:00[GMT+03:00]
+  Salary: 34565.0
+  Start Date: 2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]
+  End Date: 2025-05-17T14:02:04.760433900+03:00[Europe/Moscow]
+  Position: LABORER
+  Organization: 344546;TRUST;23e45;null;null;2345'}}
+2025-05-18 21:56:17.729 [ServerConsoleThread] INFO  server.commands.Save - Команда 'save' вызвана из серверной консоли.
+2025-05-18 21:56:17.731 [ServerConsoleThread] INFO  server.managers.CollectionManager - Сохранение коллекции в файл...
+2025-05-18 21:56:17.732 [ServerConsoleThread] INFO  server.ServerMain - Начало записи 1 элементов коллекции в XML файл: lab6.xml
+2025-05-18 21:56:17.735 [ServerConsoleThread] INFO  server.ServerMain - Коллекция успешно сохранена в файл lab6.xml
+2025-05-18 21:56:17.736 [ServerConsoleThread] INFO  server.managers.CollectionManager - Коллекция успешно сохранена в файл.
+2025-05-18 21:56:17.736 [ServerConsoleThread] INFO  server.commands.Save - Коллекция успешно сохранена.
+2025-05-18 21:56:27.850 [ServerConsoleThread] INFO  server.ServerConsole - Серверная команда 'stop' получена. Инициирование остановки сервера...
+2025-05-18 21:56:27.851 [ServerConsoleThread] INFO  server.ServerMain - Инициирована остановка сервера...
+2025-05-18 21:56:27.851 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль завершила свою работу.
+2025-05-18 21:56:27.851 [main] INFO  server.ServerMain - Основной цикл сервера завершен.
+2025-05-18 21:56:27.852 [Thread-0] INFO  server.ServerMain - Получен сигнал завершения. Сохранение коллекции...
+2025-05-18 21:56:35.431 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-18 21:56:35.539 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-18 21:56:35.542 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-18 21:56:35.543 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-18 21:56:35.543 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-18 21:56:35.554 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-18 21:56:35.555 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-18 21:56:35.555 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-18 21:56:35.556 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-18 21:56:35.557 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-18 21:56:35.557 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-18 21:56:35.558 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-18 21:56:41.736 [main] INFO  server.ServerMain - Получен пакет размером 163 байт от /88.201.133.173:49815
+2025-05-18 21:56:41.747 [main] INFO  server.ServerMain - Десериализован запрос: Request{commandName='show', stringArg='', objectArg=null} от /88.201.133.173:49815
+2025-05-18 21:56:41.748 [main] INFO  server.handlers.CommandHandler - Обработка команды 'show'
+2025-05-18 21:56:41.750 [main] INFO  server.handlers.CommandHandler - Команда 'show' выполнена с результатом: true
+2025-05-18 21:56:41.754 [main] INFO  server.ServerMain - Отправлен ответ размером 521 байт клиенту /88.201.133.173:49815: Response{executionResponse=ExecutionResponse{exitCode=true, message='Worker #1
+  Name: 45346
+  Coordinates: 564564;45645757
+  Creation Date: 2025-05-18T21:56:35.548413700+03:00[GMT+03:00]
+  Salary: 4356767.0
+  Start Date: 2025-05-18T21:07:28.851746100+03:00[GMT+03:00]
+  End Date: 2025-05-18T21:07:28.851746100+03:00[GMT+03:00]
+  Position: LABORER
+  Organization: 34543456;TRUST;ret56;80890.0;8900;53456g'}}
+2025-05-19 08:26:22.666 [main] INFO  server.ServerMain - Инициализация сервера...
+2025-05-19 08:26:22.805 [main] INFO  server.ServerMain - Сервер слушает порт: 14881
+2025-05-19 08:26:22.808 [main] INFO  server.managers.CollectionManager - CollectionManager инициализирован.
+2025-05-19 08:26:22.809 [main] INFO  server.managers.CollectionManager - Загрузка коллекции из файла...
+2025-05-19 08:26:22.809 [main] INFO  server.ServerMain - Начало чтения коллекции из XML файла: lab6.xml
+2025-05-19 08:26:22.825 [main] INFO  server.ServerMain - Чтение XML завершено. Загружено: 1, Пропущено: 0
+2025-05-19 08:26:22.826 [main] INFO  server.managers.CollectionManager - Коллекция загружена. 1 элементов добавлено, 0 дубликатов пропущено. Текущий свободный ID начнется с 2.
+2025-05-19 08:26:22.826 [main] INFO  server.ServerMain - Коллекция успешно загружена. Количество элементов: 1
+2025-05-19 08:26:22.828 [main] INFO  server.ServerMain - Команды сервера зарегистрированы.
+2025-05-19 08:26:22.828 [main] INFO  server.ServerMain - Серверная консоль запущена.
+2025-05-19 08:26:22.829 [ServerConsoleThread] INFO  server.ServerConsole - Серверная консоль запущена. Доступные команды: 'save', 'stop'.
+2025-05-19 08:26:22.830 [main] INFO  server.ServerMain - Сервер запущен и готов к приему запросов...
+2025-05-19 08:26:31.166 [main] INFO  server.ServerMain - Получен пакет размером 163 байт от /77.234.205.3:52968
+2025-05-19 08:26:31.180 [main] INFO  server.ServerMain - Десериализован запрос: Request{commandName='show', stringArg='', objectArg=null} от /77.234.205.3:52968
+2025-05-19 08:26:31.181 [main] INFO  server.handlers.CommandHandler - Обработка команды 'show'
+2025-05-19 08:26:31.183 [main] INFO  server.handlers.CommandHandler - Команда 'show' выполнена с результатом: true
+2025-05-19 08:26:31.190 [main] INFO  server.ServerMain - Отправлен ответ размером 521 байт клиенту /77.234.205.3:52968: Response{executionResponse=ExecutionResponse{exitCode=true, message='Worker #1
+  Name: 45346
+  Coordinates: 564564;45645757
+  Creation Date: 2025-05-19T08:26:22.817292700+03:00[GMT+03:00]
+  Salary: 4356767.0
+  Start Date: 2025-05-18T21:07:28.851746100+03:00[GMT+03:00]
+  End Date: 2025-05-18T21:07:28.851746100+03:00[GMT+03:00]
+  Position: LABORER
+  Organization: 34543456;TRUST;ret56;80890.0;8900;53456g'}}
+2025-05-19 08:29:57.918 [main] INFO  server.ServerMain - Получен пакет размером 163 байт от /77.234.205.3:52968
+2025-05-19 08:29:57.918 [main] INFO  server.ServerMain - Десериализован запрос: Request{commandName='show', stringArg='', objectArg=null} от /77.234.205.3:52968
+2025-05-19 08:29:57.923 [main] INFO  server.handlers.CommandHandler - Обработка команды 'show'
+2025-05-19 08:29:57.923 [main] INFO  server.handlers.CommandHandler - Команда 'show' выполнена с результатом: true
+2025-05-19 08:29:57.924 [main] INFO  server.ServerMain - Отправлен ответ размером 521 байт клиенту /77.234.205.3:52968: Response{executionResponse=ExecutionResponse{exitCode=true, message='Worker #1
+  Name: 45346
+  Coordinates: 564564;45645757
+  Creation Date: 2025-05-19T08:26:22.817292700+03:00[GMT+03:00]
+  Salary: 4356767.0
+  Start Date: 2025-05-18T21:07:28.851746100+03:00[GMT+03:00]
+  End Date: 2025-05-18T21:07:28.851746100+03:00[GMT+03:00]
+  Position: LABORER
+  Organization: 34543456;TRUST;ret56;80890.0;8900;53456g'}}
+2025-06-17 20:14:48.874 [main] INFO  server.ServerMain - Initializing server...
+2025-06-17 20:14:48.883 [main] INFO  server.ServerMain - Request reader thread pool (FixedThreadPool) initialized with 12 threads.
+2025-06-17 20:14:48.887 [main] FATAL server.ServerMain - Failed to connect to the database: No suitable driver found for jdbc:postgresql://pg:5432/studs
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://pg:5432/studs
+	at java.sql.DriverManager.getConnection(DriverManager.java:638) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:199) ~[java.sql:?]
+	at server.db.DatabaseManager.connect(DatabaseManager.java:29) [prog6_server.jar:?]
+	at server.ServerMain.initialize(ServerMain.java:73) [prog6_server.jar:?]
+	at server.ServerMain.main(ServerMain.java:59) [prog6_server.jar:?]
+2025-06-17 20:16:11.786 [main] INFO  server.ServerMain - Initializing server...
+2025-06-17 20:16:11.794 [main] INFO  server.ServerMain - Request reader thread pool (FixedThreadPool) initialized with 12 threads.
+2025-06-17 20:16:11.797 [main] FATAL server.ServerMain - Failed to connect to the database: No suitable driver found for jdbc:postgresql://pg:5432/studs
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://pg:5432/studs
+	at java.sql.DriverManager.getConnection(DriverManager.java:638) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:199) ~[java.sql:?]
+	at server.db.DatabaseManager.connect(DatabaseManager.java:29) [prog6_server.jar:?]
+	at server.ServerMain.initialize(ServerMain.java:73) [prog6_server.jar:?]
+	at server.ServerMain.main(ServerMain.java:59) [prog6_server.jar:?]
+2025-06-17 20:18:03.961 [main] INFO  server.ServerMain - Initializing server...
+2025-06-17 20:18:03.968 [main] INFO  server.ServerMain - Request reader thread pool (FixedThreadPool) initialized with 12 threads.
+2025-06-17 20:18:03.971 [main] FATAL server.ServerMain - Failed to connect to the database: No suitable driver found for jdbc:postgresql://pg:5432/studs
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://pg:5432/studs
+	at java.sql.DriverManager.getConnection(DriverManager.java:638) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:199) ~[java.sql:?]
+	at server.db.DatabaseManager.connect(DatabaseManager.java:29) [prog6_server.jar:?]
+	at server.ServerMain.initialize(ServerMain.java:73) [prog6_server.jar:?]
+	at server.ServerMain.main(ServerMain.java:59) [prog6_server.jar:?]
