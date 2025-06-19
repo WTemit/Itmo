@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workers>
+  <Worker>
+    <id>2</id>
+<name>4564576</name>
+    <coordinates>
+      <x>4576</x>
+      <y>45</y>
+    </coordinates>
+<creationDate>2025-05-16T14:28:53.357044+03:00[GMT+03:00]</creationDate>
+<salary>64.0</salary>
+<startDate>2025-05-13T12:41:03.123677800+03:00[GMT+03:00]</startDate>
+<endDate>2025-05-13T12:41:03.123677800+03:00[GMT+03:00]</endDate>
+    <organization>
+      <officialAddress>
+      </officialAddress>
+    </organization>
+  </Worker>
+</Workers>
