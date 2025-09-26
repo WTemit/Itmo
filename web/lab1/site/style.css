@@ -1,0 +1,194 @@
+:root {
+    --bg-color: #AAAAAA;
+    --surface-color: #FFFFFF;
+    --text-color: #000000;
+    --primary-color: #331CE3;
+    --accent-color: #FFA500;
+    --border-color: #808080;
+    --accent-text-color: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg-color);
+    /*background-image: url("bg.jpg");*/
+    background-size: 20% 20%;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--text-color);
+}
+
+
+.container {
+    width: 960px;
+    margin: 20px auto;
+}
+
+#main-header {
+    font-family: fantasy, cursive;
+    font-size: 22px;
+    background-color: var(--accent-color);
+    color: var(--accent-text-color);
+    transition: background-color 0.3s;
+
+}
+
+#main-header h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.theme-controls {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+}
+.color-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.color-controls input[type="color"] {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: none;
+    cursor: pointer;
+}
+.color-controls button {
+    background-color: var(--accent-color);
+    color: var(--accent-text-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+.color-controls button:hover {
+    opacity: 0.85;
+}
+
+.student-info {
+    margin: 4px 0;
+    font-size: 0.8em;
+}
+
+.content-block, form {
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #808080;
+    padding: 2%;
+}
+
+.description {
+    font-family: monospace;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+form legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    font-family: sans-serif;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    font-family: sans-serif;
+    border: 1px solid #767676;
+    padding: 1.5%;
+    width: 25%;
+}
+
+button[type="submit"], button[type="reset"] {
+    border: none;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    border-radius: 3px;
+    color: var(--accent-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+
+.results-block {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+.storage-controls {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.storage-controls span {
+    font-weight: bold;
+}
+
+.storage-controls label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+canvas {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+  }
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}

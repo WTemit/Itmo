@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР 1 - Проверка точки</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/jpg" href="bg.jpg">
+</head>
+<body>
+<div class="container">
+    <header id="main-header">
+        <h1>Кузнецов Андрей Александрович</h1>
+        <p>Группа: Р3232</p>
+        <p>Вариант: 466385</p>
+    </header>
+
+    <div class="theme-controls">
+        <h3>Управление темой</h3>
+        <div class="color-controls">
+            <label for="color-picker">Основной цвет:</label>
+            <input type="color" id="color-picker" value="#30783B">
+            <button data-scheme="mono">Монохромная</button>
+            <button data-scheme="comp">Комплементарная</button>
+            <button data-scheme="analog">Аналогичная</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="content-block">
+            <canvas id="myCanvas" width="500" height="500">
+                Ваш браузер не поддерживает тег canvas.
+            </canvas>
+        </div>
+
+        <form id="point-form" novalidate>
+            <fieldset>
+                <legend>Введите параметры</legend>
+
+                <div class="form-row">
+                    <label>Координата X:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="x-value" value="-4" id="x-m4"><label for="x-m4">-4</label>
+                        <input type="radio" name="x-value" value="-3" id="x-m3"><label for="x-m3">-3</label>
+                        <input type="radio" name="x-value" value="-2" id="x-m2"><label for="x-m2">-2</label>
+                        <input type="radio" name="x-value" value="-1" id="x-m1"><label for="x-m1">-1</label>
+                        <input type="radio" name="x-value" value="0" id="x-0" checked><label for="x-0">0</label>
+                        <input type="radio" name="x-value" value="1" id="x-1"><label for="x-1">1</label>
+                        <input type="radio" name="x-value" value="2" id="x-2"><label for="x-2">2</label>
+                        <input type="radio" name="x-value" value="3" id="x-3"><label for="x-3">3</label>
+                        <input type="radio" name="x-value" value="4" id="x-4"><label for="x-4">4</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="y-value">Координата Y:</label>
+                    <input type="text" id="y-value" name="y-value" placeholder="(-5 ... 5)" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Длина R:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="r-values" value="1" id="r-1" onclick="onlyOne(this)"><label for="r-1">1</label>
+                        <input type="checkbox" name="r-values" value="1.5" id="r-1p5" onclick="onlyOne(this)"><label for="r-1p5">1.5</label>
+                        <input type="checkbox" name="r-values" value="2" id="r-2" onclick="onlyOne(this)"><label for="r-2">2</label>
+                        <input type="checkbox" name="r-values" value="2.5" id="r-2p5" onclick="onlyOne(this)"><label for="r-2p5">2.5</label>
+                        <input type="checkbox" name="r-values" value="3" id="r-3" onclick="onlyOne(this)"><label for="r-3">3</label>
+                    </div>
+                </div>
+
+                <div class="errors-block">
+                    <p class="error" id="x-error"></p>
+                    <p class="error" id="y-error"></p>
+                    <p class="error" id="r-error"></p>
+                    <p class="error" id="response-error"></p>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Отправить</button>
+                    <button type="reset">Очистить</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="results-block">
+            <h2>Результаты</h2>
+
+            <div class="storage-controls">
+                <span>Способ хранения:</span>
+                <label><input type="radio" name="storage-method" value="localStorage" checked> Local Storage</label>
+                <label><input type="radio" name="storage-method" value="cookie"> Cookie</label>
+            </div>
+
+            <table id="results-table">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Время запроса</th>
+                    <th>Время выполнения</th>
+                </tr>
+                </thead>
+                <tbody id="results-table-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Текущее время: <span id="clock"></span></p>
+    </footer>
+</div>
+</body>
+</html>
